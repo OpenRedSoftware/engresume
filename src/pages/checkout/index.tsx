@@ -42,7 +42,40 @@ function Checkout() {
       alert("Please upload a resume");
       return;
     }
-    // todo
+
+    // Get the file
+    const file = document.getElementById("formBasicResume") as HTMLInputElement;
+    if (!file.files) {
+      alert("Please upload a resume");
+      return;
+    }
+    const resumeFile = file.files[0];
+    if (!resumeFile) {
+      alert("Please upload a resume");
+      return;
+    }
+    console.log(resumeFile);
+
+    // Send a post to http://127.0.0.1:5001/engresume-68715/us-central1/api/upload
+    // with the file, email, notes, and paymentId
+    const formData = new FormData();
+    // formData.append("resume", resumeFile);
+    // formData.append("email", email);
+    // formData.append("notes", notes);
+    formData.append("paymentId", paymentId);
+
+    // fetch("http://127.0.0.1:5001/engresume-68715/us-central1/api/upload", {
+    fetch("https://us-central1-engresume-68715.cloudfunctions.net/api/upload", {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert("Resume uploaded successfully");
+      })
+      .catch((err) => {
+        alert("Error uploading resume");
+      });
   }
 
   return (
@@ -109,7 +142,7 @@ function Checkout() {
         <Button variant="primary" type="submit" onClick={upload}>
           Submit
         </Button>
-        
+
         <p className="text-muted mt-3">
           Need help? Contact us at support@engresume.com
         </p>

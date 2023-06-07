@@ -26,6 +26,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+.firebase
+
 # idk these seem to bork yarn on fresh install
 **/yarn.lock
 **/package-lock.json

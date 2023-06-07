@@ -2,10 +2,11 @@ import express from "express";
 import cors from "cors";
 import functions from "firebase-functions";
 import nodemailer from "nodemailer";
+import multiparty from "multiparty";
 
 const app = express();
 
-app.use(cors({origin: true}));
+app.use(cors({origin: "*", optionsSuccessStatus: 200, methods: ["GET", "POST"], allowedHeaders: ["Content-Type", "Origin", "X-Requested-With", "Accept"], credentials: true}));
 
 const logHitDetails = (req) => {
   const origUrl = req.originalUrl;
@@ -22,12 +23,33 @@ const user = "engresumesender@gmail.com";
 const password = "cbserkuglohlrbjo";
 
 // http://127.0.0.1:5001/engresume-68715/us-central1/api/upload
-app.post("/upload", (req, res) => {
+app.post("/upload", async (req, res) => {
   logHitDetails(req);
-  const email = req.body.email;
-  const resume = req.body.resume;
-  const notes = req.body.notes;
-  const paymentId = req.body.paymentId;
+  // Get the file, email, notes, and payment ID from the FormData in the body of the request using multiparty
+  const form = new multiparty.Form();
+
+  const [fields, files] = await new Promise((resolve, reject) => {
+    form.parse(req, (err, fields, files) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve([fields, files]);
+      }
+    });
+  });
+
+  const resume = files?.resume?.[0]?.path;
+  const email = fields?.email?.[0];
+  const notes = fields?.notes?.[0];
+  const paymentId = fields?.paymentId?.[0];
+
+  functions.logger.log(`Got a resume from ${email} with notes ${notes} and payment ID ${paymentId}.`);
+  functions.logger.log(`Resume size is ${resume?.length} bytes.`);
+
+  if (!resume || !email || !notes || !paymentId) {
+    res.status(400).send();
+    return;
+  }
 
   // Send an email to matt@engresume.com with the resume
   const transporter = nodemailer.createTransport({
