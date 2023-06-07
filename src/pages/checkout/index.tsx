@@ -14,6 +14,7 @@ function Checkout() {
   const [resume, setResume] = React.useState("");
   const [notes, setNotes] = React.useState("");
   const [paymentText, setPaymentText] = React.useState("Complete Payment");
+  const [paymentId, setPaymentId] = React.useState("");
 
   // if URL parameter includes id, then set paid to true
   React.useEffect(() => {
@@ -23,6 +24,7 @@ function Checkout() {
     if (id) {
       setPaid(true);
       setPaymentText("Payment Complete");
+      setPaymentId(id);
     }
   }, []);
 

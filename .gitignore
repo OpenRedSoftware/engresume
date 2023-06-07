@@ -4,9 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
+/functions/node_modules
 
 # testing
 /coverage
+
+# anything that ends in .log (in any folder)
+**/*.log
 
 # production
 /build
@@ -23,5 +27,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # idk these seem to bork yarn on fresh install
-yarn.lock
-package-lock
+**/yarn.lock
+**/package-lock.json
