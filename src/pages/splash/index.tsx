@@ -29,7 +29,7 @@ function Splash() {
                   No Nonsense. No Hidden Fees.
                 </div>
                 <div className="d-flex justify-content-center">
-                  <Link to="/lessons">
+                  <Link to="/checkout">
                     <Button size="lg" className="mr-3 px-5">
                       Get started
                     </Button>

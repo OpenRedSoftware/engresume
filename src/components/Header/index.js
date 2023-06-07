@@ -1,13 +1,19 @@
 import React from "react";
 import { Navbar, Nav, Form, Button } from "react-bootstrap";
-import LoginOutButton from "./LoginOutButton";
+import CheckoutButton from "./LoginOutButton";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   return (
     <>
       <Navbar bg="light" expand="lg" className="mb-3 ps-3 pe-3 d-flex">
-        <Navbar.Brand className="me-auto">EngResume</Navbar.Brand>
-        <LoginOutButton />
+        <Navbar.Brand className="me-auto">
+          <Link to="/"
+            style={{ textDecoration: "none", color: "black" }}
+          >EngResume
+          </Link>
+        </Navbar.Brand>
+        <CheckoutButton />
       </Navbar>
     </>
   );
