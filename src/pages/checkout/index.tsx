@@ -56,25 +56,25 @@ function Checkout() {
     }
     console.log(resumeFile);
 
+
     // Send a post to http://127.0.0.1:5001/engresume-68715/us-central1/api/upload
     // with the file, email, notes, and paymentId
     const formData = new FormData();
-    // formData.append("resume", resumeFile);
-    // formData.append("email", email);
-    // formData.append("notes", notes);
+    formData.append("resume", resumeFile);
+    formData.append("email", email);
+    formData.append("notes", notes);
     formData.append("paymentId", paymentId);
 
-    // fetch("http://127.0.0.1:5001/engresume-68715/us-central1/api/upload", {
+    //fetch("http://127.0.0.1:5001/engresume-68715/us-central1/api/upload", {
     fetch("https://us-central1-engresume-68715.cloudfunctions.net/api/upload", {
       method: "POST",
       body: formData,
     })
-      .then((res) => res.json())
-      .then((data) => {
-        alert("Resume uploaded successfully");
+      .then((res) => {
+        alert("Resume uploaded successfully: " + JSON.stringify(res));
       })
       .catch((err) => {
-        alert("Error uploading resume");
+        alert("Error uploading resume: " + err);
       });
   }
 
