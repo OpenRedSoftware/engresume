@@ -1,8 +1,5 @@
 import React from "react";
 import { Navbar, Nav, Form, Button } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCog } from "@fortawesome/free-solid-svg-icons";
-import { Link, useLocation } from "react-router-dom";
 import LoginOutButton from "./LoginOutButton";
 
 const Header = (props) => {

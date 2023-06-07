@@ -22,22 +22,6 @@ function imageBanner(url) {
 function Splash() {
   return (
     <main>
-      <div className="text-center pl-3 pr-3">
-        <div
-          className="hiddenscroll"
-          style={{
-            overflow: "scroll",
-          }}
-        >
-          <span className="d-flex d-lg-inline-flex">
-            {imageBanner("https://i.imgur.com/lKke1bE.jpg")}
-            {imageBanner("https://i.imgur.com/qC9UGjJ.jpg")}
-            {imageBanner("https://i.imgur.com/6C0yIpc.jpg")}
-            {imageBanner("https://i.imgur.com/tA8D5Tk.png")}
-          </span>
-        </div>
-      </div>
-
       <div>
           <div
             className="jumbotron"
@@ -47,26 +31,21 @@ function Splash() {
           >
             <Container>
               <Row>
-                <Col md={{ span: 6 }}>
-                  <h1>OurKorean</h1>
-                  <p>
-                    The best way to learn languages through music
-                    <br />
-                  </p>
-                  <div>
+                <Col md={{ span: 1 }}></Col>
+                <Col md={{ span: 10 }}>
+                  <strong><h1 className="d-flex justify-content-center" style={{fontSize: "5rem"}}>
+                    50$
+                  </h1></strong>
+                  <div className="text-muted d-flex justify-content-center pb-2">No Nonsense. No Hidden Fees.</div>
+                  <div className="d-flex justify-content-center">
                     <Link to="/lessons">
                       <Button size="lg" className="mr-3 px-5">
                         Get started
                       </Button>
                     </Link>
                   </div>
-                  <div className="text-muted mt-3">Current version: Beta-3</div>
                 </Col>
-                <Col md={{ span: 6 }}>
-                  <div className="d-sm-block d-md-none pt-4" />
-                  <h4>Some features..</h4>
-                  <FeaturesList />
-                </Col>
+                <Col md={{ span: 1 }}></Col>
               </Row>
             </Container>
         </div>
