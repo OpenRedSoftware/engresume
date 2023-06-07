@@ -9,7 +9,7 @@ const FooterPage = () => {
     >
       <div className="footer-copyright text-center py-1">
         &copy; {new Date().getFullYear()} Copyright:{" "}
-        <a href="engresume.com"> engresume.com </a>
+        <a href="EngResume.com"> EngResume.com </a>
       </div>
       <Ads />
     </div>
