@@ -1,18 +1,16 @@
 import React from "react";
-import { Navbar, Nav} from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Navbar, Nav, Form, Button } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCog } from "@fortawesome/free-solid-svg-icons";
+import { Link, useLocation } from "react-router-dom";
+import LoginOutButton from "./LoginOutButton";
 
 const Header = (props) => {
   return (
     <>
-      <Navbar bg="light" expand="lg" className="mb-3">
-        <Link to="/">
-          <Navbar.Brand className="mr-2">EngResume</Navbar.Brand>
-        </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto"></Nav>
-        </Navbar.Collapse>{" "}
+      <Navbar bg="light" expand="lg" className="mb-3 ps-3 pe-3 d-flex">
+        <Navbar.Brand className="me-auto">EngResume</Navbar.Brand>
+        <LoginOutButton />
       </Navbar>
     </>
   );
