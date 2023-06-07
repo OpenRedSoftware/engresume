@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Container, Row, Col, Image } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import FeaturesList from "./FeaturesList";
 import "./index.css";
 
@@ -41,19 +39,8 @@ function Splash() {
       </div>
 
       <div>
-        <div className="float-right">
-          <a href="https://discord.gg/f4SAqGw">
-            <FontAwesomeIcon
-              icon={faDiscord}
-              size="lg"
-              color="grey"
-              className="mt-3 mr-3"
-            />
-          </a>
-        </div>
-        <div className="container-fluid bg-light text-dark p-5">
           <div
-            className="container bg-light pl-5"
+            className="jumbotron"
             style={{
               backgroundColor: "#F8F9FA",
             }}
@@ -82,7 +69,6 @@ function Splash() {
                 </Col>
               </Row>
             </Container>
-          </div>
         </div>
       </div>
 
