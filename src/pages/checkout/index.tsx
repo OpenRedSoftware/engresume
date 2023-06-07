@@ -17,6 +17,7 @@ function Checkout() {
   const [paymentText, setPaymentText] = React.useState("Complete Payment");
   const [paymentId, setPaymentId] = React.useState("");
   const [triedSubmit, setTriedSubmit] = React.useState(false);
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   // if URL parameter includes id, then set paid to true
   React.useEffect(() => {
@@ -49,11 +50,20 @@ function Checkout() {
       return;
     }
 
+    // If the resume is over 5MB, don't upload it
+    if (resumeFile.size > 5000000) {
+      const resumeMB = Math.round(resumeFile.size / 1000000);
+      alert("Your resume is " + resumeMB + "MB. That's rediculous. Please upload a smaller file.");
+      return;
+    }
+
     const formData = new FormData();
     formData.append("resume", resumeFile);
     formData.append("email", email);
     formData.append("notes", notes);
     formData.append("paymentId", paymentId);
+
+    setIsSubmitting(true);
 
     // fetch("http://127.0.0.1:5001/engresume-68715/us-central1/api/upload", {
     fetch("https://us-central1-engresume-68715.cloudfunctions.net/api/upload", {
@@ -65,7 +75,10 @@ function Checkout() {
         window.location.href = "/success";
       })
       .catch((err) => {
-        alert("Error uploading resume. Try again later, or contact support.\n" + err);
+        alert(
+          "Error uploading resume. Try again later, or contact support.\n" + err
+        );
+        setIsSubmitting(false);
       });
   }
 
@@ -74,7 +87,11 @@ function Checkout() {
       <Form>
         <a
           className={!paid ? "btn btn-primary mb-5" : "btn btn-secondary mb-5"}
-          href={dev ? "https://buy.stripe.com/test_dR62bE7Py3ks75e7ss" : "https://buy.stripe.com/28og1KgbZ3ZG7aE9AA"}
+          href={
+            dev
+              ? "https://buy.stripe.com/test_dR62bE7Py3ks75e7ss"
+              : "https://buy.stripe.com/28og1KgbZ3ZG7aE9AA"
+          }
           rel="noreferrer"
         >
           {paymentText}
@@ -132,8 +149,8 @@ function Checkout() {
           </Form.Text>
         </Form.Group>
 
-        <Button variant="primary" type="submit" onClick={upload}>
-          Submit
+        <Button variant="primary" type="submit" onClick={upload} disabled={isSubmitting}>
+          {!isSubmitting ? "Submit" : "Submitting..."}
         </Button>
 
         <p className="text-muted mt-3">
