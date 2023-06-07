@@ -6,7 +6,7 @@ const FooterPage = () => {
       className="navbar navbar-default font-small pt-2 mt-3 static-bottom"
       role="navigation"
     >
-      <div className="footer-copyright text-center py-1">
+      <div className="footer-copyright text-center py-1 ps-3">
         &copy; {new Date().getFullYear()} Copyright:{" "}
         <a href="EngResume.com"> EngResume.com </a>
       </div>
