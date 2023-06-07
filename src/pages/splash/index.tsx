@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Container, Row, Col } from "react-bootstrap";
-import "./index.css";
+import "../index.css";
 
 function Splash() {
   return (

@@ -3,7 +3,6 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 /**
- *
  * @returns React form that takes in the Email, Resume, and an optional Notes section.
  * Clicking submit button uploads the email/resume/notes to SubmitResume,
  * and redirects the user to https://buy.stripe.com/test_dR62bE7Py3ks75e7ss
@@ -15,6 +14,7 @@ function Checkout() {
   const [notes, setNotes] = React.useState("");
   const [paymentText, setPaymentText] = React.useState("Complete Payment");
   const [paymentId, setPaymentId] = React.useState("");
+  const [triedSubmit, setTriedSubmit] = React.useState(false);
 
   // if URL parameter includes id, then set paid to true
   React.useEffect(() => {
@@ -30,51 +30,40 @@ function Checkout() {
 
   function upload(e: any) {
     e.preventDefault();
-    if (!paid) {
-      alert("Please complete payment");
-      return;
-    }
-    if (email === "") {
-      alert("Please enter an email");
-      return;
-    }
-    if (resume === "") {
-      alert("Please upload a resume");
+    setTriedSubmit(true);
+    if (!paid || email === "" || resume === "") {
       return;
     }
 
     // Get the file
     const file = document.getElementById("formBasicResume") as HTMLInputElement;
     if (!file.files) {
-      alert("Please upload a resume");
+      alert("Your resume failed to upload. Please try again.");
       return;
     }
     const resumeFile = file.files[0];
     if (!resumeFile) {
-      alert("Please upload a resume");
+      alert("Your resume failed to upload. Please try again.");
       return;
     }
-    console.log(resumeFile);
 
-
-    // Send a post to http://127.0.0.1:5001/engresume-68715/us-central1/api/upload
-    // with the file, email, notes, and paymentId
     const formData = new FormData();
     formData.append("resume", resumeFile);
     formData.append("email", email);
     formData.append("notes", notes);
     formData.append("paymentId", paymentId);
 
-    //fetch("http://127.0.0.1:5001/engresume-68715/us-central1/api/upload", {
+    // fetch("http://127.0.0.1:5001/engresume-68715/us-central1/api/upload", {
     fetch("https://us-central1-engresume-68715.cloudfunctions.net/api/upload", {
       method: "POST",
       body: formData,
     })
       .then((res) => {
-        alert("Resume uploaded successfully: " + JSON.stringify(res));
+        // Redirect the user to /success page
+        window.location.href = "/success";
       })
       .catch((err) => {
-        alert("Error uploading resume: " + err);
+        alert("Error uploading resume. Try again later, or contact support.\n" + err);
       });
   }
 
@@ -99,6 +88,7 @@ function Checkout() {
             type="email"
             placeholder="Enter email"
             disabled={!paid}
+            isInvalid={email === "" && triedSubmit}
           />
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
@@ -115,6 +105,7 @@ function Checkout() {
             type="file"
             placeholder="Upload Resume"
             disabled={!paid}
+            isInvalid={resume === "" && triedSubmit}
           />
           <Form.Text className="text-muted">
             Please upload your resume as a PDF.
