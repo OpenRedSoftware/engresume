@@ -1,5 +1,4 @@
 import React from "react";
-import Ads from "../components/Ads";
 
 const FooterPage = () => {
   return (
@@ -11,7 +10,6 @@ const FooterPage = () => {
         &copy; {new Date().getFullYear()} Copyright:{" "}
         <a href="EngResume.com"> EngResume.com </a>
       </div>
-      <Ads />
     </div>
   );
 };
