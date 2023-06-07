@@ -8,6 +8,8 @@ import Button from "react-bootstrap/Button";
  * and redirects the user to https://buy.stripe.com/test_dR62bE7Py3ks75e7ss
  */
 function Checkout() {
+  const dev = window.location.hostname === "localhost";
+
   const [paid, setPaid] = React.useState(false);
   const [email, setEmail] = React.useState("");
   const [resume, setResume] = React.useState("");
@@ -72,7 +74,7 @@ function Checkout() {
       <Form>
         <a
           className={!paid ? "btn btn-primary mb-5" : "btn btn-secondary mb-5"}
-          href="https://buy.stripe.com/test_dR62bE7Py3ks75e7ss?client_reference_id=wee"
+          href={dev ? "https://buy.stripe.com/test_dR62bE7Py3ks75e7ss" : "https://buy.stripe.com/28og1KgbZ3ZG7aE9AA"}
           rel="noreferrer"
         >
           {paymentText}
