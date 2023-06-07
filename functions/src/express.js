@@ -23,6 +23,7 @@ const password = "cbserkuglohlrbjo";
 
 // http://127.0.0.1:5001/engresume-68715/us-central1/api/upload
 app.post("/upload", async (req, res) => {
+  logHitDetails(req);
   const fields = {};
   let resume = null;
   const bb = busboy({headers: req.headers});
