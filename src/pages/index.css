@@ -15,3 +15,14 @@
   background-color: var(--bs-light);
   border-radius: .3rem;  
 }
+
+.shadow {
+  border-radius: .3rem;
+  margin-bottom: 2rem;
+}
+
+div.middle-div {
+  position: relative;
+  top: 30%;
+  transform: translateY(-30%);
+}

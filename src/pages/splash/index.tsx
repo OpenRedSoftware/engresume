@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import FAQ from "../../components/FAQ";
-import "../index.css";
 import { logevent } from "../../firebase/firebaseapp";
+import Carousel from "../../components/Carousel";
+import "../index.css";
 
 function Splash() {
   React.useEffect(() => {
@@ -13,6 +14,7 @@ function Splash() {
   return (
     <main>
       <div>
+        <Carousel />
         <div className="d-flex justify-content-center p-2 pb-3">
           <h2>Professional Software Engineering Resume Reviews.</h2>
         </div>

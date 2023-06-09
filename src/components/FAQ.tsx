@@ -20,16 +20,32 @@ const FAQ = () => {
                   <li>Format/Content improvements</li>
                   <li>Impact & anti-dilution modifications</li>
                 </ul>
-                This service is for Software Engineering resumes. Other resumes
-                can be submitted, but should include a note for what role they
-                are targetting.
+                If you're not targetting a Software Engineering role, please
+                include the relevant JD/info in the submission so we can tailor
+                towards that.
               </li>
               <li className="pb-2">
                 Why is it so expensive?
                 <ul>
                   <li>
                     The price is a balance between having too many submissions
-                    and paying reviewers fairly.
+                    and paying reviewers fairly. Also, consider:
+                    <ul>
+                      <li>
+                        Similar profit-driven services charge up to 350$ for a
+                        similar result (we can also vouch for the quality of
+                        these services)
+                      </li>
+                      <li>
+                        The 75th percentile Software Engineer salaries in the
+                        Bay Area is ~230k TC. If you're below that, you stand a
+                        lot to gain.
+                      </li>
+                      <li>
+                        Doubling your callback rate saves a lot of time.
+                        Penny-wise, pound foolish.
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </li>
