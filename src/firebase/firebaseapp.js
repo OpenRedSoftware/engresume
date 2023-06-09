@@ -17,5 +17,5 @@ const analytics = getAnalytics(app);
 
 export const logevent = (name, params) => {
   logEvent(analytics, name, params);
-  console.log("logevent", name, params)
+  // console.log("logevent", name, params)
 }
