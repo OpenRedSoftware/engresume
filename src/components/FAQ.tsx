@@ -21,17 +21,16 @@ const FAQ = () => {
               </li>
               <li className="pb-2">
                 <div className="pb-2">What does this service offer?</div>
-                The resume review gives actionable feedback that can mostly be
-                inserted directly into your resume to make it better. This
+                The review gives actionable feedback that can, for the most part, be
+                inserted directly into your resume for better results. This feedback
                 includes:
                 <ul className="pb-2">
-                  <li>Bulletpoint guidance</li>
+                  <li>Bulletpoint guidance & improvements</li>
                   <li>Format/Content improvements</li>
-                  <li>Impact & anti-dilution</li>
+                  <li>Impact & anti-dilution modifications</li>
                 </ul>
                 This service is for Software Engineering resumes. Devops & Web
-                Dev resumes can be submitted as well, but are not the main focus
-                of this service.
+                Dev resumes can be submitted as well, but are not the main target.
               </li>
               <li className="pb-2">
                 Any example reviews?
