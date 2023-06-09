@@ -3,8 +3,13 @@ import { Link } from "react-router-dom";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import FAQ from "../../components/FAQ";
 import "../index.css";
+import { logevent } from "../../firebase/firebaseapp";
 
 function Splash() {
+  React.useEffect(() => {
+    logevent("view", {name: window.location.pathname});
+  }, []);
+
   return (
     <main>
       <div>

@@ -1,5 +1,6 @@
-import 'firebase/auth';
-import 'firebase/database';
+import { initializeApp } from 'firebase/app';
+import { getAnalytics, logEvent } from "firebase/analytics";
+import 'firebase/app';
 
 export const config = {
   apiKey: "AIzaSyBRTRaptx8NL5jALfVifwxZ2Gx2MP2NiaA",
@@ -11,3 +12,10 @@ export const config = {
   measurementId: "G-0FK9JZBEDV"
 };
 
+const app = initializeApp(config);
+const analytics = getAnalytics(app);
+
+export const logevent = (name, params) => {
+  logEvent(analytics, name, params);
+  console.log("logevent", name, params)
+}
