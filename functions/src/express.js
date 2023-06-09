@@ -72,9 +72,9 @@ app.post("/upload", async (req, res) => {
 
     const mailOptions = {
       from: user,
-      to: "matt@engresume.com",
+      to: "danielginovker@gmail.com",
       subject: `New Resume from ${email}`,
-      text: `Email: ${email}\nNotes: ${notes}\nPayment ID: ${paymentId}`,
+      text: `Email: ${email}\nNotes: ${notes}\nPayment ID: ${paymentId}\n\nDo not reply to this email directly`,
       attachments: [
         {
           filename: "resume.pdf",
