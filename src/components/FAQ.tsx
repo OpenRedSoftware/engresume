@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -15,41 +14,24 @@ const FAQ = () => {
                 Why is it so expensive?
                 <ul>
                   <li>
-                    The price is a deterrent to avoid too many submissions. This
-                    service was originally free and provided on various social
-                    platforms including Reddit, Lemmy, and Blind, but quickly
-                    grew too large.
+                    The price is to avoid too many submissions. This service was
+                    originally free, but was flooded with submissions.
                   </li>
                 </ul>
               </li>
               <li className="pb-2">
-                What does the service offer?
-                <ul>
-                  <li>
-                    The service has two core parts:
-                    <ol>
-                      <li>
-                        Resume content feedback (format, skills, education,
-                        anything else)
-                      </li>
-                      <li>
-                        Experience (+ Projects) bullet points Direct feedback on
-                        BS detection and improvement areas Example bullet points
-                        rewriting Most users require help in both areas.
-                      </li>
-                    </ol>
-                  </li>
+                <div className="pb-2">What does this service offer?</div>
+                The resume review gives actionable feedback that can mostly be
+                inserted directly into your resume to make it better. This
+                includes:
+                <ul className="pb-2">
+                  <li>Bulletpoint guidance</li>
+                  <li>Format/Content improvements</li>
+                  <li>Impact & anti-dilution</li>
                 </ul>
-              </li>
-              <li className="pb-2">
-                What sort of resumes are accepted?
-                <ul>
-                  <li>
-                    Only Software Engineering resumes are accepted at this time.
-                    Devops & Web Dev focused resumes are accepted too, but not
-                    the subject matter expertise.
-                  </li>
-                </ul>
+                This service is for Software Engineering resumes. Devops & Web
+                Dev resumes can be submitted as well, but are not the main focus
+                of this service.
               </li>
               <li className="pb-2">
                 Any example reviews?
