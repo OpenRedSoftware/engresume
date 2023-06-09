@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -53,7 +54,11 @@ function Checkout() {
     // If the resume is over 5MB, don't upload it
     if (resumeFile.size > 5000000) {
       const resumeMB = Math.round(resumeFile.size / 1000000);
-      alert("Your resume is " + resumeMB + "MB. That's rediculous. Please upload a smaller file.");
+      alert(
+        "Your resume is " +
+          resumeMB +
+          "MB. That's rediculous. Please upload a smaller file."
+      );
       return;
     }
 
@@ -88,7 +93,9 @@ function Checkout() {
         <a
           className={!paid ? "btn btn-primary mb-5" : "btn btn-secondary mb-5"}
           href={
-            dev
+            paid
+              ? "#"
+              : dev
               ? "https://buy.stripe.com/test_dR62bE7Py3ks75e7ss"
               : "https://buy.stripe.com/28og1KgbZ3ZG7aE9AA"
           }
@@ -149,7 +156,12 @@ function Checkout() {
           </Form.Text>
         </Form.Group>
 
-        <Button variant="primary" type="submit" onClick={upload} disabled={isSubmitting}>
+        <Button
+          variant="primary"
+          type="submit"
+          onClick={upload}
+          disabled={isSubmitting}
+        >
           {!isSubmitting ? "Submit" : "Submitting..."}
         </Button>
 
