@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const FooterPage = () => {
   return (
     <div
-      className="navbar navbar-default font-small pt-2 mt-3 static-bottom"
+      className="navbar navbar-default font-small"
       role="navigation"
     >
       <div className="footer-copyright text-center py-1 ps-3 me-auto">

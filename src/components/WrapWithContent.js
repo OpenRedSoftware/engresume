@@ -7,14 +7,16 @@ export default function WrapWithContent(jsxElement) {
   return (
     <>
       <Header />
-      <Container>
-        <Row>
-          <Col>
-            {jsxElement.jsxElement}
-          </Col>
-        </Row>
-      </Container>
-      <Footer />
+      <div className="min-vh-100 d-flex flex-column justify-content-between">
+        <Container>
+          <Row>
+            <Col>
+              {jsxElement.jsxElement}
+            </Col>
+          </Row>
+        </Container>
+        <Footer />
+      </div>
     </>
   );
 }
