@@ -1,67 +1,103 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
-import { run as runHolder } from "holderjs/holder";
 import "../../pages/index.css";
-
-const carouselHeight = "150";
-const carouselColor = "f8f8fa";
+import React, { useEffect, useState } from "react";
+import "./styles.css";
 
 function ControlledCarousel() {
-  const [index, setIndex] = useState(0);
+  /*
+            <div className="captionContent">
+              "[...] This was super helpful. I've been having a tough time getting
+              interviews so I appreciate you taking the time to leave detailed
+              feedback."
+              <div className="text-muted pt-1">4 YOE Senior Mobile Dev</div>
+            </div>
+            <div className="captionContent">
+              "Thank you for your valuable insights. I truly appreciate the
+              dedicated time and effort you have invested in assisting me."
+              <div className="text-muted pt-1">0 YOE Intern Web Dev</div>
+            </div>
+            <div className="captionContent">
+              "For 50$, can you review it again? 😁"
+              <div className="text-muted pt-1">
+                2 YOE Backend Dev; Later landed Amazon SDE I
+              </div>
+            </div>
+            */
 
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
+  const [activeSlide, setActiveSlide] = useState(1);
+
+  const reviews = [
+    {
+      name: "4 YOE Senior Mobile Dev",
+      quote:
+        "[...] This was super helpful. I've been having a tough time getting interviews so I appreciate you taking the time to leave detailed feedback.",
+    },
+    {
+      name: "0 YOE Intern Web Dev",
+      quote:
+        "Thank you for your valuable insights. I truly appreciate the dedicated time and effort you have invested in assisting me.",
+    },
+    {
+      name: "2 YOE Backend Dev; Later landed Amazon SDE I",
+      quote:
+        "For 50$, can you review it again? 😁",
+    },
+  ];
 
   useEffect(() => {
-    runHolder("image-class-name");
-  });
+    // This variable prevents race condition
+    let current = 1;
+    const cycleReviews = () => {
+      if (current === 3) {
+        current = 1;
+      } else {
+        current += 1;
+      }
+      setActiveSlide(current);
+    };
+    // intervalId identified so it can be canceled on unmount
+    const intervalId = setInterval(() => {
+      cycleReviews();
+    }, 6000);
+    // Removes interval on unmount
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
-    <div className="shadow">
-      <Carousel activeIndex={index} onSelect={handleSelect} variant="dark">
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={`holder.js/100x${carouselHeight}?text=%20&bg=${carouselColor}`}
-            alt="First slide"
+    <div className="App">
+      <ul className="carousel__list">
+        {reviews.map((review, index) => {
+          const { name, quote } = review;
+          const count = index + 1;
+          return (
+            <li
+              className={`carousel__item
+                ${count === activeSlide ? " active" : ""}
+                ${count < activeSlide ? " left" : ""}
+                ${count > activeSlide ? " right" : ""}
+              `}
+              key={count}
+            >
+              <blockquote className="carousel__quote">
+                <cite>
+                  <span className="carousel__name">{name}</span>
+                </cite>
+                <p>"{quote}"</p>
+              </blockquote>
+            </li>
+          );
+        })}
+        <li className="carousel__indicator">
+          <span
+            className={`carousel__dot${activeSlide === 1 ? " active" : ""}`}
           />
-          <Carousel.Caption>
-            "Thank you for your valuable insights. I truly appreciate the
-            dedicated time and effort you have invested in assisting me."
-            <div className="text-muted pt-1">0 YOE Intern Web Dev</div>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={`holder.js/100x${carouselHeight}?text=%20&bg=${carouselColor}`}
-            alt="Second slide"
+          <span
+            className={`carousel__dot${activeSlide === 2 ? " active" : ""}`}
           />
-
-          <Carousel.Caption>
-            "[...] This was super helpful. I've been having a tough time getting
-            interviews so I appreciate you taking the time to leave detailed
-            feedback."
-            <div className="text-muted pt-1">4 YOE Senior Mobile Dev</div>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={`holder.js/100x${carouselHeight}?text=%20&bg=${carouselColor}`}
-            alt="Third slide"
+          <span
+            className={`carousel__dot${activeSlide === 3 ? " active" : ""}`}
           />
-
-          <Carousel.Caption>
-            <div className="middle-div">
-              "For 50$, can you review it again? 😁"
-              <div className="text-muted pt-1">2 YOE Backend Dev; Later landed Amazon SDE I</div>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+        </li>
+      </ul>
     </div>
   );
 }

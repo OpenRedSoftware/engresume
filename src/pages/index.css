@@ -21,8 +21,26 @@
   margin-bottom: 2rem;
 }
 
-div.middle-div {
-  position: relative;
-  top: 30%;
-  transform: translateY(-30%);
+.vcenter2 {
+  bottom: auto;
+  /*
+  top: 10%;
+  transform: translateY(-10%);
+  */
+}
+
+.vcenter {
+  /*
+  top: 10%;
+  transform: translateY(-10%);
+  bottom: initial;
+  */
+}
+
+.item {
+  /*
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  */
 }

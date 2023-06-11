@@ -16,7 +16,7 @@ function Splash() {
       <div>
         <Carousel />
         <div className="d-flex justify-content-center p-2 pb-3">
-          <h2>Professional Software Engineering Resume Reviews.</h2>
+          <h2>Professional Resume Reviews.</h2>
         </div>
         <div
           className="jumbotron"
