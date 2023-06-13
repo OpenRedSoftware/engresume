@@ -18,7 +18,7 @@
 
 ### Firebase Stuff
 
-#### Make a new release to EngResume.com
+#### Make a new release to PineappleResume.com
 
 ```yarn build```
 

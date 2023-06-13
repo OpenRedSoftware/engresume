@@ -1,6 +1,6 @@
 {
   "name": "functions",
-  "description": "Backend for engresume.com",
+  "description": "Backend for PineappleResume.com",
   "type": "module",
   "scripts": {
     "lint": "eslint .",

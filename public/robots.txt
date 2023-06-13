@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-Sitemap: https://engresume.com/sitemap.xml
+Sitemap: https://PineappleResume.com/sitemap.xml

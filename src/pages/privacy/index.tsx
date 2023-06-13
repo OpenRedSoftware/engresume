@@ -7,10 +7,10 @@ function Splash() {
       <h1>Privacy Policy for 15094623 Canada Inc.</h1>
 
       <p>
-        At EngResume, accessible from https://engresume.com/, one of our main
+        At PineappleResume, accessible from https://PineappleResume.com/, one of our main
         priorities is the privacy of our visitors. This Privacy Policy document
         contains types of information that is collected and recorded by
-        EngResume and how we use it.
+        PineappleResume and how we use it.
       </p>
 
       <p>
@@ -21,7 +21,7 @@ function Splash() {
       <p>
         This Privacy Policy applies only to our online activities and is valid
         for visitors to our website with regards to the information that they
-        shared and/or collect in EngResume. This policy is not applicable to any
+        shared and/or collect in PineappleResume. This policy is not applicable to any
         information collected offline or via channels other than this website.
       </p>
 
@@ -73,7 +73,7 @@ function Splash() {
       <h2>Log Files</h2>
 
       <p>
-        EngResume follows a standard procedure of using log files. These files
+        PineappleResume follows a standard procedure of using log files. These files
         log visitors when they visit websites. All hosting companies do this and
         a part of hosting services' analytics. The information collected by log
         files include internet protocol (IP) addresses, browser type, Internet
@@ -88,13 +88,13 @@ function Splash() {
 
       <p>
         You may consult this list to find the Privacy Policy for each of the
-        advertising partners of EngResume.
+        advertising partners of PineappleResume.
       </p>
 
       <p>
         Third-party ad servers or ad networks uses technologies like cookies,
         JavaScript, or Web Beacons that are used in their respective
-        advertisements and links that appear on EngResume, which are sent
+        advertisements and links that appear on PineappleResume, which are sent
         directly to users' browser. They automatically receive your IP address
         when this occurs. These technologies are used to measure the
         effectiveness of their advertising campaigns and/or to personalize the
@@ -102,14 +102,14 @@ function Splash() {
       </p>
 
       <p>
-        Note that EngResume has no access to or control over these cookies that
+        Note that PineappleResume has no access to or control over these cookies that
         are used by third-party advertisers.
       </p>
 
       <h2>Third Party Privacy Policies</h2>
 
       <p>
-        EngResume's Privacy Policy does not apply to other advertisers or
+        PineappleResume's Privacy Policy does not apply to other advertisers or
         websites. Thus, we are advising you to consult the respective Privacy
         Policies of these third-party ad servers for more detailed information.
         It may include their practices and instructions about how to opt-out of
@@ -194,7 +194,7 @@ function Splash() {
       </p>
 
       <p>
-        EngResume does not knowingly collect any Personal Identifiable
+        PineappleResume does not knowingly collect any Personal Identifiable
         Information from children under the age of 13. If you think that your
         child provided this kind of information on our website, we strongly
         encourage you to contact us immediately and we will do our best efforts

@@ -1,8 +1,8 @@
 {
   "main": "index.js",
   "public": "build",
-  "name": "engresume",
-  "version": "0.1.0",
+  "name": "pineappleresume",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@babel/preset-typescript": "^7.10.4",

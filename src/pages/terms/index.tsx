@@ -8,16 +8,16 @@ function Splash() {
         <strong>Terms and Conditions</strong>
       </h2>
 
-      <p>Welcome to EngResume!</p>
+      <p>Welcome to PineappleResume!</p>
 
       <p>
         These terms and conditions outline the rules and regulations for the use
-        of 15094623 Canada Inc.'s Website, located at https://engresume.com/.
+        of 15094623 Canada Inc.'s Website, located at https://PineappleResume.com/.
       </p>
 
       <p>
         By accessing this website we assume you accept these terms and
-        conditions. Do not continue to use EngResume if you do not agree to take
+        conditions. Do not continue to use PineappleResume if you do not agree to take
         all of the terms and conditions stated on this page.
       </p>
 
@@ -42,7 +42,7 @@ function Splash() {
       </h3>
 
       <p>
-        We employ the use of cookies. By accessing EngResume, you agreed to use
+        We employ the use of cookies. By accessing PineappleResume, you agreed to use
         cookies in agreement with the 15094623 Canada Inc.'s Privacy Policy.{" "}
       </p>
 
