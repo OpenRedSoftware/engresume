@@ -38,21 +38,14 @@ function ControlledCarousel() {
     },
     {
       name: "2 YOE Backend Dev; Later landed Amazon SDE I",
-      quote:
-        "For 50$, can you review it again? 😁",
+      quote: "For 50$, can you review it again? 😁",
     },
   ];
 
   useEffect(() => {
     // This variable prevents race condition
-    let current = 1;
     const cycleReviews = () => {
-      if (current === 3) {
-        current = 1;
-      } else {
-        current += 1;
-      }
-      setActiveSlide(current);
+      setActiveSlide(activeSlide === 3 ? 1 : activeSlide + 1);
     };
     // intervalId identified so it can be canceled on unmount
     const intervalId = setInterval(() => {
@@ -60,7 +53,7 @@ function ControlledCarousel() {
     }, 6000);
     // Removes interval on unmount
     return () => clearInterval(intervalId);
-  }, []);
+  }, [activeSlide]);
 
   return (
     <div className="App">
@@ -89,12 +82,18 @@ function ControlledCarousel() {
         <li className="carousel__indicator">
           <span
             className={`carousel__dot${activeSlide === 1 ? " active" : ""}`}
+            onClick={() => setActiveSlide(1)}
+            role="button"
           />
           <span
             className={`carousel__dot${activeSlide === 2 ? " active" : ""}`}
+            onClick={() => setActiveSlide(2)}
+            role="button"
           />
           <span
             className={`carousel__dot${activeSlide === 3 ? " active" : ""}`}
+            onClick={() => setActiveSlide(3)}
+            role="button"
           />
         </li>
       </ul>
