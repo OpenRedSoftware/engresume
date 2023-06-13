@@ -10,7 +10,8 @@ const Header = (props) => {
         <Navbar.Brand className="me-auto">
           <Link to="/"
             style={{ textDecoration: "none", color: "black" }}
-          >PineappleResume
+          >
+             Pineapple Resume
           </Link>
         </Navbar.Brand>
         <CheckoutButton />
