@@ -12,17 +12,18 @@ const FAQ = () => {
             <ul>
               <li className="pb-2">
                 <div className="pb-2">What does this service offer?</div>
-                The review returns actionable feedback and improvements that can
-                be inserted directly into your resume for better results. This
-                feedback includes:
+                <div className="pb-2">
+                  Actionable feedback and improvements that can be inserted into
+                  your resume for better results. This includes:
+                </div>
                 <ul className="pb-2">
                   <li>Bulletpoint improvements & suggestions</li>
                   <li>Format/Content improvements</li>
                   <li>Impact & anti-dilution modifications</li>
                 </ul>
-                If you're not targetting a Software Engineering role, please
-                include the relevant JD/info in the submission so we can tailor
-                towards that.
+                If you're not targetting Software Engineering, include your role
+                (and optionally JD) during submission so we can tailor towards
+                that.
               </li>
               <li className="pb-2">
                 Why is it so expensive?
@@ -38,12 +39,12 @@ const FAQ = () => {
                       </li>
                       <li>
                         The 75th percentile Software Engineer salaries in the
-                        Bay Area is ~230k TC. If you're below that, you stand a
+                        Bay Area is ~230k TC. If you're below that, you have a
                         lot to gain.
                       </li>
                       <li>
-                        Doubling your callback rate saves a lot of time.
-                        Penny-wise, pound foolish.
+                        Time is money. Doubling your callback rate saves a lot
+                        of time.
                       </li>
                     </ul>
                   </li>
