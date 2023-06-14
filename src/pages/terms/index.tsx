@@ -1,9 +1,14 @@
 import React from "react";
 import "../index.css";
+import { Helmet } from 'react-helmet-async';
 
 function Splash() {
   return (
     <main>
+      <Helmet prioritizeSeoTags>
+        <title>PineappleResume | Terms & Conditions</title>
+        <meta property="og:title" content="PineappleResume | Terms & Conditions" />
+      </Helmet>
       <h2>
         <strong>Terms and Conditions</strong>
       </h2>

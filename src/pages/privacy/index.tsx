@@ -1,9 +1,14 @@
 import React from "react";
 import "../index.css";
+import { Helmet } from 'react-helmet-async';
 
 function Splash() {
   return (
     <main>
+      <Helmet prioritizeSeoTags>
+        <title>PineappleResume | Privacy</title>
+        <meta property="og:title" content="PineappleResume | Privacy" />
+      </Helmet>
       <h1>Privacy Policy for 15094623 Canada Inc.</h1>
 
       <p>

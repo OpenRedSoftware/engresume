@@ -3,6 +3,7 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { logevent } from "../../firebase/firebaseapp";
+import { Helmet } from 'react-helmet-async';
 
 /**
  * @returns React form that takes in the Email, Resume, and an optional Notes section.
@@ -91,7 +92,11 @@ function Checkout() {
   }
 
   return (
-    <div>
+    <>
+      <Helmet prioritizeSeoTags>
+        <title>PineappleResume | Checkout</title>
+        <meta property="og:title" content="PineappleResume | Checkout" />
+      </Helmet>
       <Form>
         <a
           className={!paid ? "btn btn-primary mb-5" : "btn btn-secondary mb-5"}
@@ -172,7 +177,7 @@ function Checkout() {
           Need help? Contact us at support@engresume.com
         </p>
       </Form>
-    </div>
+    </>
   );
 }
 

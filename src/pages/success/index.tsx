@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../index.css";
 import { logevent } from "../../firebase/firebaseapp";
+import { Helmet } from 'react-helmet-async';
 
 function Splash() {
   React.useEffect(() => {
@@ -10,6 +11,10 @@ function Splash() {
 
   return (
     <main>
+      <Helmet prioritizeSeoTags>
+        <title>PineappleResume | Success</title>
+        <meta property="og:title" content="PineappleResume | Success" />
+      </Helmet>
       <div>
         <div
           className="jumbotron"
