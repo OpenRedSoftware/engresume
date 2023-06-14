@@ -7,11 +7,11 @@ const FooterPage = () => {
       className="navbar navbar-default font-small"
       role="navigation"
     >
-      <div className="footer-copyright text-center py-1 ps-3 me-auto">
+      <div className="footer-copyright py-1 me-auto ps-sm-3">
         &copy; {new Date().getFullYear()} Copyright:{" "}
         <Link to="/"> PineappleResume.com </Link>
       </div>
-      <div className="pe-3">
+      <div className="pe-sm-3">
         <Link to="/privacy"
           style={{ textDecoration: "none", color: "black" }}
         >Privacy</Link> | <Link to="/terms"
