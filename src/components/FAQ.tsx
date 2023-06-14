@@ -56,7 +56,7 @@ const FAQ = () => {
                   <li>
                     See here:{" "}
                     <a href="https://www.levels.fyi/community/thread/GXiJUI/free-resume-review">
-                      https://www.levels.fyi/community/thread/GXiJUI/free-resume-review
+                      https://levels.fyi/community/thread/GXiJUI/free-resume-review
                     </a>
                   </li>
                 </ul>
