@@ -7,20 +7,17 @@ function Splash() {
       <h2>
         <strong>Terms and Conditions</strong>
       </h2>
-
       <p>Welcome to PineappleResume!</p>
-
       <p>
         These terms and conditions outline the rules and regulations for the use
-        of 15094623 Canada Inc.'s Website, located at https://PineappleResume.com/.
+        of 15094623 Canada Inc.'s Website, located at
+        https://PineappleResume.com/.
       </p>
-
       <p>
         By accessing this website we assume you accept these terms and
-        conditions. Do not continue to use PineappleResume if you do not agree to take
-        all of the terms and conditions stated on this page.
+        conditions. Do not continue to use PineappleResume if you do not agree
+        to take all of the terms and conditions stated on this page.
       </p>
-
       <p>
         The following terminology applies to these Terms and Conditions, Privacy
         Statement and Disclaimer Notice and all Agreements: "Client", "You" and
@@ -36,16 +33,14 @@ function Splash() {
         other words in the singular, plural, capitalization and/or he/she or
         they, are taken as interchangeable and therefore as referring to same.
       </p>
-
       <h3>
         <strong>Cookies</strong>
       </h3>
-
       <p>
-        We employ the use of cookies. By accessing PineappleResume, you agreed to use
-        cookies in agreement with the 15094623 Canada Inc.'s Privacy Policy.{" "}
+        We employ the use of cookies. By accessing PineappleResume, you agreed
+        to use cookies in agreement with the 15094623 Canada Inc.'s Privacy
+        Policy.{" "}
       </p>
-
       <p>
         Most interactive websites use cookies to let us retrieve the user's
         details for each visit. Cookies are used by our website to enable the
@@ -53,35 +48,29 @@ function Splash() {
         website. Some of our affiliate/advertising partners may also use
         cookies.
       </p>
-
       <h3>
         <strong>Removal of links from our website</strong>
       </h3>
-
       <p>
         If you find any link on our Website that is offensive for any reason,
         you are free to contact and inform us any moment. We will consider
         requests to remove links but we are not obligated to or so or to respond
         to you directly.
       </p>
-
       <p>
         We do not ensure that the information on this website is correct, we do
         not warrant its completeness or accuracy; nor do we promise to ensure
         that the website remains available or that the material on the website
         is kept up to date.
       </p>
-
       <h3>
         <strong>Disclaimer</strong>
       </h3>
-
       <p>
         To the maximum extent permitted by applicable law, we exclude all
         representations, warranties and conditions relating to our website and
         the use of this website. Nothing in this disclaimer will:
       </p>
-
       <ul>
         <li>
           limit or exclude our or your liability for death or personal injury;
@@ -99,7 +88,6 @@ function Splash() {
           applicable law.
         </li>
       </ul>
-
       <p>
         The limitations and prohibitions of liability set in this Section and
         elsewhere in this disclaimer: (a) are subject to the preceding
@@ -107,12 +95,31 @@ function Splash() {
         including liabilities arising in contract, in tort and for breach of
         statutory duty.
       </p>
-
       <p>
         As long as the website and the information and services on the website
         are provided free of charge, we will not be liable for any loss or
         damage of any nature.
       </p>
+      <h3>
+        <strong>Notes on Guarantees</strong>
+      </h3>
+      Statements made on the website and during advertising assume that
+      advertisements are exaggerated to a reasonable amount. As an example, "We
+      guarantee more callbacks" requires the user to have made a reasonable
+      number of applications both before and after using the service to notice a
+      difference. In the event of a significant number of applications made both
+      before and after, with callbacks happening both before and after, but with
+      no noticible callback rate difference, a refund may be processed.
+      <h3>
+        <strong>Right to change Terms</strong>
+      </h3>
+      The Terms of Service on this page may be changed at any time without
+      notice. It is the responsibility of the user to check this page for
+      changes. If, at the time of purchase, the Terms of Service reflected
+      differently, and you have a copy (archive, screenshot, or whatever else)
+      proving that, and you believe you deserve a refund based on the Terms of
+      Service that were present at that time, please contact us to discuss a
+      refund.
     </main>
   );
 }
