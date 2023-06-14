@@ -55,8 +55,13 @@ const FAQ = () => {
                 <ul>
                   <li>
                     See here:{" "}
-                    <a href="https://www.levels.fyi/community/thread/GXiJUI/free-resume-review">
+                    { /* Show this version if the layout is sm or larger */ }
+                    <a href="https://www.levels.fyi/community/thread/GXiJUI/free-resume-review" className="d-none d-sm-block">
                       https://levels.fyi/community/thread/GXiJUI/free-resume-review
+                    </a>
+                    { /* Show this version if the layout is xs or smaller */ }
+                    <a href="https://www.levels.fyi/community/thread/GXiJUI/free-resume-review" className="d-block d-sm-none">
+                      Levels.fyi Thread
                     </a>
                   </li>
                 </ul>
