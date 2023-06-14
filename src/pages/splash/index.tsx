@@ -14,8 +14,8 @@ function Splash() {
   return (
     <>
       <Helmet prioritizeSeoTags>
-        <title>PineappleResume | Reviews</title>
-        <meta property="og:title" content="PineappleResume | Reviews" />
+        <title>PineappleResume | Resume Review by Top Recruiters</title>
+        <meta property="og:title" content="PineappleResume | Resume Review by Top Recruiters" />
       </Helmet>
       <div>
         <Carousel />
