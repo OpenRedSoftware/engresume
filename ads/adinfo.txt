@@ -1,0 +1,10 @@
+## Countries:
+
+United Kingdom, Germany, Denmark, Israel, Sweden, United States , Norway, Canada, Switzerland, Australia
+
+## Subreddits:
+
+cscareerquestions
+girlsgonewired
+experienceddevs
+cscareerquestionscad
