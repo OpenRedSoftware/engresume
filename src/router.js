@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Switch, Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter as Switch, Route, Routes, useLocation } from "react-router-dom";
 import WrapWithContent from "./components/WrapWithContent";
 import Splash from "./pages/splash";
 import Checkout from "./pages/checkout"
@@ -14,8 +14,19 @@ import Salary from "./pages/interviewguide/salary";
 import "mdbreact/dist/css/mdb.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 const Router = () => (
   <Switch>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<WrapWithContent jsxElement={<Splash />} />} />
       <Route path="/checkout" element={<WrapWithContent jsxElement={<Checkout />} />} />
