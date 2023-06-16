@@ -11,14 +11,15 @@ function Behavioral() {
   return (
     <>
       <Helmet prioritizeSeoTags>
-        <title>Behavioral Interview Guide | Pineapple Resume</title>
-        <meta property="og:title" content="PineappleResume | Success" />
+        <title>STAR Format Properly | Pineapple Resume</title>
+        <meta property="og:title" content="STAR Format Properly | Pineapple Resume" />
+        <meta property="og:description" content="Advanced tips on How to use STAR Format - Use this cheat sheet to ace your next interview" />
       </Helmet>
       <div>
         <h2 className="text-center">Behavioral Interview Guide</h2>
         <ul>
           <li className="pb-2">
-            <div className="pb-2">Why STAR Format?</div>
+            <div className="pb-2">Why Situation, Task, Action, Result Format?</div>
             <ul className="pb-2">
               <li>It forces linear story-telling</li>
               <li>Keeps the interviewer engaged</li>

@@ -12,7 +12,8 @@ function SystemDesign() {
     <>
       <Helmet prioritizeSeoTags>
         <title>System Design Interview Guide | Pineapple Resume</title>
-        <meta property="og:title" content="PineappleResume | Success" />
+        <meta property="og:title" content="How to answer System Design questions in an Interview | Pineapple Resume" />
+        <meta property="og:description" content="Use this System Design cheat sheet to ace any System Design interview question." />
       </Helmet>
       <div>
         <h2 className="text-center">System Design Interview Guide</h2>

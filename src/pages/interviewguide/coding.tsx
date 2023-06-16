@@ -12,7 +12,8 @@ function Coding() {
     <>
       <Helmet prioritizeSeoTags>
         <title>Coding Interview Guide | Pineapple Resume</title>
-        <meta property="og:title" content="PineappleResume | Success" />
+        <meta property="og:title" content="Acing Coding Interviews | Pineapple Resume" />
+        <meta property="og:description" content="How to Answer Coding Interview Questions Properly - Use this cheat sheet to ace any Leetcode interview question." />
       </Helmet>
       <div>
         <h2 className="text-center">Coding Interview Guide</h2>

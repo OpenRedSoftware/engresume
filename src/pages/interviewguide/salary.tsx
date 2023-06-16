@@ -11,9 +11,9 @@ function Salary() {
   return (
     <>
       <Helmet prioritizeSeoTags>
-        <title>Salary Negotiation Guide | Pineapple Resume</title>
-        <meta property="og:title" content="PineappleResume | Success" />
-        <meta property="og:description" content="Salary Negotiation Guide" />
+        <title>How to do Salary Negotiation Properly | Pineapple Resume</title>
+        <meta property="og:title" content="How to do Salary Negotiation Properly | Pineapple Resume" />
+        <meta property="og:description" content="No fluff - These are the steps you must follow to maximize your negotiation and make sure you get the highest compensation for any role." />
         <meta
           property="og:url"
           content="https://www.pineappleresume.com/salary"
