@@ -9,3 +9,8 @@ girlsgonewired
 experienceddevs
 cscareerquestionscad
 overemployed
+
+Once you have published, on the lefthand side, you will see "Devices" at the bottom of the panel
+Click that, and there you can deselect mobile devices
+
+The campaign team can optimize it for a better performance if I click"I accept on the email Sanil sends me"

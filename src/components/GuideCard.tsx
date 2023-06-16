@@ -4,15 +4,20 @@ import { Link } from "react-router-dom";
 
 function GuideCard(props) {
   return (
-    <Link to={props.linkdestination} style={{ textDecoration: "none" }}>
-      <Card style={{ width: "18rem", margin: "1rem" }}>
-        <Card.Img variant="top" src={props.image} />
+    <Card style={{ width: "18rem", maxWidth: "95%", margin: "0.5rem"}}>
+      <Link
+        to={props.linkdestination}
+        style={{ textDecoration: "none" }}
+      >
+        <Card.Img variant="top" style={{ padding: "30%" }} src={props.image} />
         <Card.Body>
-          <Card.Title>{props.title}</Card.Title>
-          <Card.Text>{props.description}</Card.Text>
+          <Card.Title style={{ textAlign: "center" }}>{props.title}</Card.Title>
+          <Card.Text style={{ textAlign: "center" }}>
+            {props.description}
+          </Card.Text>
         </Card.Body>
-      </Card>
-    </Link>
+      </Link>
+    </Card>
   );
 }
 
