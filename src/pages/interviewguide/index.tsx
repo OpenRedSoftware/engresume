@@ -29,13 +29,13 @@ function InterviewGuide() {
       <div className="row justify-content-center align-items-center">
         <GuideCard
           linkdestination="/interviewguide/behavioral"
-          image="/res/icons/sd.svg"
+          image="/res/icons/behavioral.svg"
           title="Behavioral Questions"
           description="More than STAR format - How to actually answer behavioral questions"
         />
         <GuideCard
           linkdestination="/interviewguide/coding"
-          image="holder.js/100px180"
+          image="/res/icons/code.svg"
           title="Coding Questions"
           description="How to prepare for coding questions - Besides Leetcode"
         />
@@ -47,8 +47,8 @@ function InterviewGuide() {
         />
         <GuideCard
           linkdestination="/interviewguide/salary"
-          image="holder.js/100px180"
-          title="Salaray Negotiation"
+          image="/res/icons/salary.svg"
+          title="Salary Negotiation"
           description="Concrete tips you must follow to negotiate for the highest salary"
         />
         <div className="text-muted">
