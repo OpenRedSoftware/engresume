@@ -29,13 +29,19 @@ function InterviewGuide() {
             linkdestination="/interviewguide/coding"
             image="holder.js/100px180"
             title="Coding Questions"
-            description="How to prepare for coding questions"
+            description="How to prepare for coding questions - Besides Leetcode"
           />
           <GuideCard
             linkdestination="/interviewguide/systemdesign"
             image="holder.js/100px180"
             title="System Design"
-            description="How to prepare for system design questions"
+            description="Steps to follow during your SD interview - Including the Dos and Don'ts of System Design"
+          />
+          <GuideCard
+            linkdestination="/interviewguide/salary"
+            image="holder.js/100px180"
+            title="Salaray Negotiation"
+            description="Concrete tips you must follow to negotiate for the highest salary"
           />
         </CardGroup>
         <div className="text-muted">
