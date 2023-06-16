@@ -26,7 +26,7 @@ function InterviewGuide() {
       <div className="row justify-content-center align-items-center">
         Choose a topic to deep dive:
       </div>
-      <div className="row justify-content-center align-items-center">
+      <div className="row justify-content-center align-items-center d-flex align-items-stretch mt-2 mb-3">
         <GuideCard
           linkdestination="/interviewguide/behavioral"
           image="/res/icons/behavioral.svg"
@@ -51,10 +51,10 @@ function InterviewGuide() {
           title="Salary Negotiation"
           description="Concrete tips to follow when negotiating for the highest salary."
         />
-        <div className="text-muted">
-          Resources on this page were written by recruiters and hiring managers
-          from startups to MANGA companies.
-        </div>
+      </div>
+      <div className="text-muted">
+        Resources on this page were written by recruiters and hiring managers
+        from startups to MANGA companies.
       </div>
     </div>
   );
