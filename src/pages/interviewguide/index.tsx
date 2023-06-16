@@ -31,29 +31,29 @@ function InterviewGuide() {
           linkdestination="/interviewguide/behavioral"
           image="/res/icons/behavioral.svg"
           title="Behavioral Questions"
-          description="More than STAR format - How to actually answer behavioral questions"
+          description="More than STAR format - How to actually answer behavioral questions."
         />
         <GuideCard
           linkdestination="/interviewguide/coding"
           image="/res/icons/code.svg"
           title="Coding Questions"
-          description="How to prepare for coding questions - Besides Leetcode"
+          description="How to prepare for coding questions - Besides Leetcode."
         />
         <GuideCard
           linkdestination="/interviewguide/systemdesign"
           image="/res/icons/sd.svg"
           title="System Design"
-          description="Steps to follow during your SD interview - Including the Dos and Don'ts of System Design"
+          description="Steps to follow during your SD interview - Including the Dos and Don'ts of System Design."
         />
         <GuideCard
           linkdestination="/interviewguide/salary"
           image="/res/icons/salary.svg"
           title="Salary Negotiation"
-          description="Concrete tips you must follow to negotiate for the highest salary"
+          description="Concrete tips to follow when negotiating for the highest salary."
         />
         <div className="text-muted">
-          This interview guide was written by recruiters and hiring managers
-          from startups to MANGA+ companies.
+          Resources on this page were written by recruiters and hiring managers
+          from startups to MANGA companies.
         </div>
       </div>
     </div>
