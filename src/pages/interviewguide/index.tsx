@@ -1,9 +1,8 @@
 import React from "react";
-import { CardGroup, Card } from "react-bootstrap";
+import { CardGroup } from "react-bootstrap";
 import "../index.css";
 import { logevent } from "../../firebase/firebaseapp";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import GuideCard from "../../components/GuideCard";
 
 function InterviewGuide() {
@@ -39,8 +38,10 @@ function InterviewGuide() {
             description="How to prepare for system design questions"
           />
         </CardGroup>
-        This interview guide combines knowledge from recruiters and hiring
-        managers from startups to MANGA+ companies.
+        <div className="text-muted">
+          This interview guide was written by recruiters and hiring managers
+          from startups to MANGA+ companies.
+        </div>
       </div>
     </main>
   );
