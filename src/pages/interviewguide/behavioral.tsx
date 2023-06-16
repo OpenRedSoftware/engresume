@@ -15,7 +15,7 @@ function Behavioral() {
         <meta property="og:title" content="PineappleResume | Success" />
       </Helmet>
       <div>
-        <h2>Behavioral Interview Guide</h2>
+        <h2 className="text-center">Behavioral Interview Guide</h2>
         <ul>
           <li className="pb-2">
             <div className="pb-2">Why STAR Format?</div>
@@ -39,28 +39,6 @@ function Behavioral() {
               <li>
                 Practice downwards tone inflection - You don’t want to come off
                 as lacking confidence
-              </li>
-            </ul>
-          </li>
-          <li className="pb-2">
-            <div className="pb-2">Advanced Tips</div>
-            <ul className="pb-2">
-              <li>
-                The interviewer’s question doesn’t actually matter - What
-                matters is you prove you have the skill they’re looking for in
-                the question
-              </li>
-              <li>
-                Consider the following question: “Tell me about a time you made
-                a hard decision to sacrifice short term gain for a longer-term
-                goal”
-              </li>
-              <li>
-                The interviewer does not really care about the specifics here
-              </li>
-              <li>
-                The interviewer wants you to prove you have ownership over the
-                products you’re working on
               </li>
             </ul>
           </li>
@@ -117,11 +95,36 @@ function Behavioral() {
             <li>What monitoring frameworks did you put in place?</li>
           </ul>
         </ul>
+
+        <li className="pb-2">
+          <div className="pb-2">Advanced Tips</div>
+          <ul className="pb-2">
+            <li>
+              The interviewer’s question doesn’t actually matter - What matters
+              is you prove you have the skill they’re looking for in the
+              question
+            </li>
+            <li>
+              Consider the following question: “Tell me about a time you made a
+              hard decision to sacrifice short term gain for a longer-term goal”
+            </li>
+            <ul>
+              <li>
+                The interviewer does not really care about the specifics here
+              </li>
+              <li>
+                The interviewer wants you to prove you have ownership over the
+                products you’re working on
+              </li>
+            </ul>
+          </ul>
+        </li>
+
         <div className="pb-2">Great external resources:</div>
         <ul className="pb-2">
           <li>
-            Guess the LP - Fantastic Behavioral questions -
-            https://guessthelp.com/
+            Guess the LP - Fantastic Behavioral questions:{" "} 
+            <a href="https://guessthelp.com/">guessthelp.com</a>
           </li>
         </ul>
       </div>
