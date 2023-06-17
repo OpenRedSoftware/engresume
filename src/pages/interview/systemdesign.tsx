@@ -13,7 +13,7 @@ function SystemDesign() {
       <SEO
         title="System Design Interview Guide | Pineapple Resume"
         description="Use this System Design cheat sheet to ace any System Design interview question."
-        url="https://www.pineappleresume.com/interviewguide/systemdesign"
+        url="https://www.pineappleresume.com/systemdesign"
       />
       <div>
         <h2 className="text-center p-2">System Design Interview Guide</h2>

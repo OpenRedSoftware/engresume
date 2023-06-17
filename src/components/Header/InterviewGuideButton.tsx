@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CheckoutButton = (props) => {
   return (
-    <Link to="/interviewguide">
+    <Link to="/interview">
       <Button variant="outline" size="sm" onClick={() => {}}>
         Interview Guide
       </Button>

@@ -12,7 +12,7 @@ function Coding() {
     <>
       <SEO title="Acing Coding Interviews | Pineapple Resume"
         description="How to Answer Coding Interview Questions Properly - Use this cheat sheet to ace any Leetcode interview question."
-        url="htt[s://www.pineappleresume.com/interviewguide/coding" />
+        url="htt[s://www.pineappleresume.com/coding" />
       <div>
         <h2 className="text-center p-2">Coding Interview Guide</h2>
         <div className="pb-2">Pre-interview prep</div>

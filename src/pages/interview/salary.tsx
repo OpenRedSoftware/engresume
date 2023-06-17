@@ -18,7 +18,7 @@ function Salary() {
       <SEO
         title="How to do Salary Negotiation Properly | Pineapple Resume"
         description="No fluff - These are the steps to follow to get make sure you get the highest compensation for any role."
-        url="https://www.pineappleresume.com/interviewguide/salary"
+        url="https://www.pineappleresume.com/salary"
       />
       <div className="container">
         <h2 className="text-center p-2">Salary Negotiation Guide</h2>

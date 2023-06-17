@@ -12,7 +12,7 @@ function Behavioral() {
     <>
       <SEO title="STAR Format Properly | Pineapple Resume"
         description="Advanced tips on How to use STAR Format - Use this cheat sheet to ace your next interview"
-        url="https://www.pineappleresume.com/interviewguide/behavioral" />
+        url="https://www.pineappleresume.com/behavioral" />
       <div>
         <h2 className="text-center p-2">Behavioral Interview Guide</h2>
         <ul>
