@@ -10,9 +10,11 @@ function Coding() {
 
   return (
     <>
-      <SEO title="Acing Coding Interviews | Pineapple Resume"
+      <SEO
+        title="Acing Coding Interviews | Pineapple Resume"
         description="How to Answer Coding Interview Questions Properly - Use this cheat sheet to ace any Leetcode interview question."
-        url="htt[s://www.pineappleresume.com/coding" />
+        url="htt[s://www.pineappleresume.com/coding"
+      />
       <div>
         <h2 className="text-center p-2">Coding Interview Guide</h2>
         <div className="pb-2">Pre-interview prep</div>
@@ -36,14 +38,19 @@ function Coding() {
             What language?
             <ul>
               <li>
-                Any language is fine, but Python is best. It's relatively
-                succinct, every interviewer knows it, and it has great builtins
-                (lru_cache, bisect, heap)
+                Any language is fine, but Python is best. It's succinct,
+                interviewers knows it, and it has great builtins (lru_cache,
+                bisect, heap)
               </li>
             </ul>
             <li>Study Guide:</li>
             <ul>
-              <li>Basic algorithm and data structure courses (Youtube)</li>
+              <li>
+                Basic algorithm and data structures
+                <sup>
+                  <a href="#links">#</a>
+                </sup>
+              </li>
               <li>Blind 75</li>
               <li>Neetcode 150</li>
               <li>Daily Leetcode Challenge until your interview</li>
@@ -96,7 +103,10 @@ function Coding() {
               around a brute force solution.
             </li>
           </ul>
-          <li>If whiteboarding, leave space between each line so you can easily make adjustments.</li>
+          <li>
+            If whiteboarding, leave space between each line so you can easily
+            make adjustments.
+          </li>
         </ul>
         <div className="pb-2">During the interview, follow these steps:</div>
         <ul className="pb-2">
@@ -109,8 +119,33 @@ function Coding() {
           <li>Improve</li>
           <li>Talk about time+space complexity</li>
         </ul>
-        <div className="pb-2">Great external resources:</div>
+        <div className="pb-2" id="links">
+          Great external resources:
+        </div>
         <ul className="pb-2">
+          <li>
+            Bari's Playlist - Introduction to Algorithms and Time Complexity:{" "}
+            <a href="https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O">
+              youtube.com
+            </a>
+            <ul>
+              <li>
+                This is quite long, but the first 16 videos are fantastic for
+                beginners
+              </li>
+            </ul>
+          </li>
+          <li>
+            Data Structures by an ex-Competitive Programmer:{" "}
+            <a href="https://www.youtube.com/playlist?list=PLDV1Zeh2NRsB6SWUrDFW2RmDotAfPbeHu">
+              youtube.com
+            </a>
+            <ul>
+              <li>
+                These videos are quite short and will set you up for Blind75
+              </li>
+            </ul>
+          </li>
           <li>
             Neetcode - The most important Leetcode questions you should solve +
             excellent video walkthrough solutions:{" "}
