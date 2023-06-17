@@ -21,7 +21,7 @@ function Salary() {
         <meta name="description" content="Salary Negotiation Guide" />
       </Helmet>
       <div className="container">
-        <h2 className="text-center">Salary Negotiation Guide</h2>
+        <h2 className="text-center p-2">Salary Negotiation Guide</h2>
         <ul>
           <li className="pb-2">
             <div className="pb-2">When should you negotiate salary?</div>

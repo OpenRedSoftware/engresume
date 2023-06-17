@@ -12,77 +12,110 @@ function Coding() {
     <>
       <Helmet prioritizeSeoTags>
         <title>Coding Interview Guide | Pineapple Resume</title>
-        <meta property="og:title" content="Acing Coding Interviews | Pineapple Resume" />
-        <meta property="og:description" content="How to Answer Coding Interview Questions Properly - Use this cheat sheet to ace any Leetcode interview question." />
+        <meta
+          property="og:title"
+          content="Acing Coding Interviews | Pineapple Resume"
+        />
+        <meta
+          property="og:description"
+          content="How to Answer Coding Interview Questions Properly - Use this cheat sheet to ace any Leetcode interview question."
+        />
       </Helmet>
       <div>
-        <h2 className="text-center">Coding Interview Guide</h2>
+        <h2 className="text-center p-2">Coding Interview Guide</h2>
+        <div className="pb-2">Pre-interview prep</div>
+        <ul className="pb-2">
+          <li>
+            How many Leetcode questions?
+            <ul>
+              <li>
+                Entry-level SWE: Blind75 with &#62;80% success rate (without
+                checking hints or solutions)
+              </li>
+              <li>
+                Entry-level MANGA+: Blind75 + 200 total mediums, &#62;80%
+                success rate
+              </li>
+              <li>Senior roles: full Neetcode 150 + 200 more mediums</li>
+              <li>If based in India, aim for 100+ hards</li>
+            </ul>
+          </li>
+          <li>
+            What language?
+            <ul>
+              <li>
+                Any language is fine, but Python is best. It's relatively
+                succinct, every interviewer knows it, and it has great builtins
+                (lru_cache, bisect, heap)
+              </li>
+            </ul>
+            <li>Study Guide:</li>
+            <ul>
+              <li>Basic algorithm and data structure courses (Youtube)</li>
+              <li>Blind 75</li>
+              <li>Neetcode 150</li>
+              <li>Daily Leetcode Challenge until your interview</li>
+            </ul>
+          </li>
+        </ul>
+        <div className="pb-2">Interview Room</div>
         <ul>
-          <li className="pb-2">
-            <div className="pb-2">
-              If you’re not talking, I can only assume you’re completely lost
-            </div>
-            <ul className="pb-2">
+          <li>Never stop talking out loud</li>
+          <ul className="pb-2">
+            <li>Going silent is the #1 reason people fail interviews.</li>
+            <li>
+              Despite being a coding round, most of your evaluation will be on
+              communication, not coding.
+            </li>
+            <li>
+              Communicate your thought process. Walk through examples out loud.
+              When you're coding, explain what you're doing.
+            </li>
+            <ul>
               <li>
-                It is almost unheard of for a candidate to pass a high level
-                technical interview if they go more than 30 seconds at a time
-                without saying something
+                "As a brute force, we could permutate over all of the [...]"
               </li>
               <li>
-                If you’re not writing code, talk out loud about what you’re
-                thinking of
+                "It looks like we’re going to need to sort the input so that
+                [...]"
               </li>
-              <li>
-                “It looks like we’re going to need to sort the input so that
-                [...]”
-              </li>
-              <li>If you are writing code, explain what you’re writing</li>
-              <li>“We need to iterate over all the elements and [...]”</li>
+              <li>"We need to iterate over all the elements and [...]"</li>
             </ul>
-          </li>
+            <li>
+              In the hundreds of technical interviews I've run, not one
+              candidate get a "strong hire" if they went silent for over 60
+              seconds.
+            </li>
+          </ul>
           <li className="pb-2">
-            <div className="pb-2">
-              If you don’t get the brute force solution, you’re lost
-            </div>
-            <ul className="pb-2">
-              <li>
-                The brute force solution should only take a few minutes, and it
-                will reinforce that you understand the problem
-              </li>
-              <li>
-                It doesn’t matter if you got 90% of the way to an optimal
-                solution
-              </li>
-            </ul>
+            You must get a solution, even if it's brute force
           </li>
-          <li className="pb-2">
-            <div className="pb-2">Steps to follow:</div>
-            <ul className="pb-2">
-              <li>Repeat the question, talk through it</li>
-              <li>Come up with examples, solve them</li>
-              <li>Come up with edge cases</li>
-              <li>Code</li>
-              <li>Test main examples</li>
-              <li>Test edge cases</li>
-              <li>Improve</li>
-              <li>Talk about time+space complexity</li>
-            </ul>
-          </li>
-          <li className="pb-2">
-            <div className="pb-2">How many Leetcode questions?</div>
-            <ul className="pb-2">
-              <li>
-                If targeting entry-level MANGA+, aim for at least Blind75 + 50-100 more
-                mediums with &#62;80% success rate
-              </li>
-              <li>
-                For senior roles, aim for full Neetcode 150 + 50-100 more mediums
-              </li>
-              <li>
-                If based in India, aim for 200+ mediums and 50-100 hards, and use Codeforces instead of Leetcode
-              </li>
-            </ul>
-          </li>
+          <ul className="pb-2">
+            <li>The brute force solution should only take a minute or two.</li>
+            <li>
+              If you know you will get the optimal solution, you don't need to
+              write the brute force.
+            </li>
+            <li>
+              Brute forcing will reinforce that you understand the problem.
+            </li>
+            <li>
+              While unlikely, a coding round can be saved by great communication
+              around a brute force solution.
+            </li>
+          </ul>
+          <li>If whiteboarding, leave space between each line so you can easily make adjustments.</li>
+        </ul>
+        <div className="pb-2">During the interview, follow these steps:</div>
+        <ul className="pb-2">
+          <li>Repeat the question, talk through it</li>
+          <li>Come up with examples, solve them</li>
+          <li>Come up with edge cases</li>
+          <li>Code</li>
+          <li>Test main examples</li>
+          <li>Test edge cases</li>
+          <li>Improve</li>
+          <li>Talk about time+space complexity</li>
         </ul>
         <div className="pb-2">Great external resources:</div>
         <ul className="pb-2">
@@ -92,7 +125,8 @@ function Coding() {
             <a href="https://neetcode.io/practice">neetcode.io/practice</a>
           </li>
           <li>
-            Codeforces - Rating system, more challenging than Leetcode, great for getting problems at your level:{" "}
+            Codeforces - Rating system, more challenging than Leetcode, great
+            for getting problems at your level:{" "}
             <a href="https://codeforces.com/">codeforces.com</a>
           </li>
         </ul>

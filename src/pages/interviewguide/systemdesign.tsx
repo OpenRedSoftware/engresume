@@ -12,48 +12,62 @@ function SystemDesign() {
     <>
       <Helmet prioritizeSeoTags>
         <title>System Design Interview Guide | Pineapple Resume</title>
-        <meta property="og:title" content="How to answer System Design questions in an Interview | Pineapple Resume" />
-        <meta property="og:description" content="Use this System Design cheat sheet to ace any System Design interview question." />
+        <meta
+          property="og:title"
+          content="How to answer System Design questions in an Interview | Pineapple Resume"
+        />
+        <meta
+          property="og:description"
+          content="Use this System Design cheat sheet to ace any System Design interview question."
+        />
       </Helmet>
       <div>
-        <h2 className="text-center">System Design Interview Guide</h2>
+        <h2 className="text-center p-2">System Design Interview Guide</h2>
         <ul>
           <li className="pb-2">
             <div className="pb-2">Tips:</div>
             <ul className="pb-2">
               <li>
-                Make sure you walk through every API call after your design
+                Make sure you walk through every API call after your design.
               </li>
               <li>
                 If you’re going to make any elegant drawings at all, make sure
-                you’re fluent in your design software
+                you’re fluent in your design software.
               </li>
               <li>
-                Do not blurt out SQL vs NoSQL pros & cons. Only mention whatever
-                is directly relevant to your problem
+                Do not blurt out SQL vs NoSQL pros & cons. Mention only what is
+                relevant to your design.
               </li>
               <li>Be very wary of time</li>
-              <li>
-                A lot of major parts in the SD interview can be covered in under
-                20 seconds, so don’t spend 5 minutes on them
-              </li>
-              <li>
-                I.e. Edge cases, bottlenecks, analytics, security, health checks
-              </li>
-              <li>
-                The interviewer will ask for more detail if they want you to
-                spend more time
-              </li>
+              <ul>
+                <li>
+                  A lot of major parts in the SD interview can be covered in
+                  under 20 seconds, so don’t spend 5 minutes on them
+                </li>
+                <li>
+                  I.e. Edge cases, bottlenecks, analytics, security, health
+                  checks
+                </li>
+                <li>
+                  The interviewer will ask for more detail if they want you to
+                  spend more time
+                </li>
+              </ul>
               <li>
                 When making modifications due to changing requirements at the
-                end of the interview, you don’t have to draw them
+                end of the interview, you don’t need to draw them
               </li>
               <li>
                 Requirements and Math mostly the same in every SD interview,
                 don’t spend much time here
               </li>
+              <li>
+                The SD interview is a two-way conversation. Drive the
+                conversation, but be ready for feedback.
+              </li>
             </ul>
           </li>
+          <p>As a concrete example, let’s design Twitter.</p>
           <li className="pb-2">
             <div className="pb-2">Steps to follow:</div>
             <ul className="pb-2">
@@ -63,7 +77,7 @@ function SystemDesign() {
                   Are we focusing on the backend only, or are we developing the
                   front-end too?
                 </li>
-                <li>Talk about edge cases out loud (10 seconds)</li>
+                <li>Mention edge cases out loud (10 seconds)</li>
                 <li>Functional</li>
                 <ul>
                   <li>
@@ -76,8 +90,8 @@ function SystemDesign() {
                 <li>Non Functional</li>
                 <ul>
                   <li>Availability: 99.999%</li>
-                  <li>Latency:</li>
-                  <li>Scale (how many users)</li>
+                  <li>Latency: 0.5 seconds to load Tweets</li>
+                  <li>Scale (how many users, pick a realistic number)</li>
                 </ul>
                 <li>Talk about edge cases out loud (10 seconds)</li>
               </ul>

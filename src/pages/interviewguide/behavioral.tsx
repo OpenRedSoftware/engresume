@@ -22,7 +22,7 @@ function Behavioral() {
         />
       </Helmet>
       <div>
-        <h2 className="text-center">Behavioral Interview Guide</h2>
+        <h2 className="text-center p-2">Behavioral Interview Guide</h2>
         <ul>
           <li className="pb-2">
             <div className="pb-2">
