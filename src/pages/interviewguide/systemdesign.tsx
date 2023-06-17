@@ -117,42 +117,26 @@ function SystemDesign() {
                 </li>
                 <li>markTweetFavorite(user_id, tweet_id, timestamp, …)</li>
               </ul>
-              <li>Defining data model</li>
-              <ul>
-                <li>
-                  User: UserID, Name, Email, DoB, CreationDate, LastLogin, etc.
-                </li>
-                <li>
-                  Tweet: TweetID, Content, TweetLocation, NumberOfLikes,
-                  TimeStamp, etc.
-                </li>
-                <li>UserFollow: UserID1, UserID2</li>
-                <li>FavoriteTweets: UserID, TweetID, TimeStamp</li>
-              </ul>
+              <li>Data model</li>
               <ul>
                 <li>Storage, transportation, encryption</li>
                 <li>What database to use?</li>
                 <ul>
-                  <li>SQL better for relational data/efficient queries</li>
-                  <ul>
-                    <li>If asked-</li>
-                    <li>User id is primary key, int, serial</li>
-                    <li>
-                      Photo has own primary id, int serial, has user id as
-                      foreign key
-                    </li>
-                  </ul>
-                  <li>
-                    NoSQL better for unorganized data, easier to horizontally
-                    scale & shard
-                  </li>
+                  <li>Relational database like NoSQL</li>
+                  <li>User table (id, username) and a Tweet table (id, content, username(primary key of User table))</li>
+                  <li>Relation between users and other users</li>
+                  <li>Relation between users and tweets</li>
                 </ul>
+                <li>This is read-heavy, optimize with read replicas and aim for eventual consistency</li>
+                <li>Mention edge cases like when a celebrity tweets</li>
               </ul>
               <li>High-level design</li>
               <ul>
                 <li>Do not waste ample time making it pretty</li>
                 <li>Be very good in the software you’re using</li>
               </ul>
+              <li>Walk through your API again</li>
+              <li>Discuss changes, bottlenecks, and more edge cases</li>
             </ul>
           </li>
         </ul>
