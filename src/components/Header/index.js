@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
-import CheckoutButton from "./LoginOutButton";
+import CheckoutButton from "./CheckoutButton";
+import InterviewGuideButton from "./InterviewGuideButton";
 import { Link } from "react-router-dom";
 
 const Header = (props) => {
@@ -14,6 +15,7 @@ const Header = (props) => {
              Pineapple Resume
           </Link>
         </Navbar.Brand>
+        <InterviewGuideButton />
         <CheckoutButton />
       </Navbar>
     </>

@@ -1,0 +1,25 @@
+import React from "react";
+import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
+function GuideCard(props) {
+  return (
+    <Card style={{ width: "18rem", maxWidth: "95%", margin: "0.5rem" }}>
+      <Link to={props.linkdestination} style={{ textDecoration: "none" }}>
+        <Card.Img
+          variant="top"
+          style={{ padding: "30%", height: "15rem" }}
+          src={props.image}
+        />
+        <Card.Body>
+          <Card.Title style={{ textAlign: "center" }}>{props.title}</Card.Title>
+          <Card.Text style={{ textAlign: "center" }}>
+            {props.description}
+          </Card.Text>
+        </Card.Body>
+      </Link>
+    </Card>
+  );
+}
+
+export default GuideCard;
