@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { logevent } from "../../firebase/firebaseapp";
 import SEO from "../../components/SEO";
+import { Alert } from "react-bootstrap";
 
 /**
  * @returns React form that takes in the Email, Resume, and an optional Notes section.
@@ -14,13 +15,14 @@ function Checkout() {
   const dev = window.location.hostname === "localhost";
 
   const [paid, setPaid] = React.useState(false);
-  const [email, setEmail] = React.useState("");
+  const [email, setEmail] = React.useState(localStorage.getItem("email") || "");
   const [resume, setResume] = React.useState("");
-  const [notes, setNotes] = React.useState("");
+  const [notes, setNotes] = React.useState(localStorage.getItem("notes") || "");
   const [paymentText, setPaymentText] = React.useState("Complete Payment");
   const [paymentId, setPaymentId] = React.useState("");
   const [triedSubmit, setTriedSubmit] = React.useState(false);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [showMustpay, setShowMustpay] = React.useState(false);
 
   // if URL parameter includes id, then set paid to true
   React.useEffect(() => {
@@ -39,7 +41,13 @@ function Checkout() {
   function upload(e: any) {
     e.preventDefault();
     setTriedSubmit(true);
-    if (!paid || email === "" || resume === "") {
+
+    if (email === "" || resume === "") {
+      return;
+    }
+
+    if (!paid) {
+      setShowMustpay(true);
       return;
     }
 
@@ -99,30 +107,16 @@ function Checkout() {
         url="https://pineappleresume.com/checkout"
       />
       <Form>
-        <a
-          className={!paid ? "btn btn-primary mb-5" : "btn btn-secondary mb-5"}
-          href={
-            paid
-              ? "#"
-              : dev
-              ? "https://buy.stripe.com/test_dR62bE7Py3ks75e7ss"
-              : "https://buy.stripe.com/28og1KgbZ3ZG7aE9AA"
-          }
-          rel="noreferrer"
-        >
-          {paymentText}
-        </a>
-
-        <br />
-
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              localStorage.setItem("email", e.target.value);
+            }}
             type="email"
             placeholder="Enter email"
-            disabled={!paid}
             isInvalid={email === "" && triedSubmit}
           />
           <Form.Text className="text-muted">
@@ -136,10 +130,11 @@ function Checkout() {
           <Form.Label>Resume</Form.Label>
           <Form.Control
             value={resume}
-            onChange={(e) => setResume(e.target.value)}
+            onChange={(e) => {
+              setResume(e.target.value);
+            }}
             type="file"
             placeholder="Upload Resume"
-            disabled={!paid}
             isInvalid={resume === "" && triedSubmit}
           />
           <Form.Text className="text-muted">
@@ -153,10 +148,12 @@ function Checkout() {
           <Form.Label>Notes</Form.Label>
           <Form.Control
             value={notes}
-            onChange={(e) => setNotes(e.target.value)}
+            onChange={(e) => {
+              setNotes(e.target.value);
+              localStorage.setItem("notes", e.target.value);
+            }}
             type="text"
             placeholder="Enter any notes here"
-            disabled={!paid}
           />
           <Form.Text className="text-muted">
             Please enter any notes you would like to add.
@@ -164,6 +161,27 @@ function Checkout() {
             <br />
           </Form.Text>
         </Form.Group>
+
+        <a
+          href={
+            paid
+              ? "#"
+              : dev
+              ? "https://buy.stripe.com/test_dR62bE7Py3ks75e7ss"
+              : "https://buy.stripe.com/28og1KgbZ3ZG7aE9AA"
+          }
+          rel="noreferrer"
+        >
+          <Button
+            className={
+              !paid ? "btn btn-primary" : "btn btn-secondary"
+            }
+          >
+            {paymentText}
+          </Button>
+        </a>
+
+        <br />
 
         <Button
           variant="primary"
@@ -173,6 +191,14 @@ function Checkout() {
         >
           {!isSubmitting ? "Submit" : "Submitting..."}
         </Button>
+
+        <br />
+
+        {showMustpay && (
+          <Alert variant="danger" className="mt-3">
+            Please complete payment before submitting.
+          </Alert>
+        )}
 
         <p className="text-muted mt-3">
           Need help? Contact us at support@engresume.com
