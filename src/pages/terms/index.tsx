@@ -1,14 +1,13 @@
 import React from "react";
 import "../index.css";
-import { Helmet } from 'react-helmet-async';
+import SEO from "../../components/SEO";
 
 function Splash() {
   return (
     <main>
-      <Helmet prioritizeSeoTags>
-        <title>PineappleResume | Terms & Conditions</title>
-        <meta property="og:title" content="PineappleResume | Terms & Conditions" />
-      </Helmet>
+      <SEO title="PineappleResume | Terms & Conditions"
+        description="PineappleResume.com - Terms & Conditions"
+        url="https://www.pineappleresume.com/terms" />
       <h2>
         <strong>Terms and Conditions</strong>
       </h2>

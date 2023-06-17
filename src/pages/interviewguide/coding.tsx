@@ -1,7 +1,7 @@
 import React from "react";
 import "../index.css";
 import { logevent } from "../../firebase/firebaseapp";
-import { Helmet } from "react-helmet-async";
+import SEO from "../../components/SEO";
 
 function Coding() {
   React.useEffect(() => {
@@ -10,17 +10,9 @@ function Coding() {
 
   return (
     <>
-      <Helmet prioritizeSeoTags>
-        <title>Coding Interview Guide | Pineapple Resume</title>
-        <meta
-          property="og:title"
-          content="Acing Coding Interviews | Pineapple Resume"
-        />
-        <meta
-          property="og:description"
-          content="How to Answer Coding Interview Questions Properly - Use this cheat sheet to ace any Leetcode interview question."
-        />
-      </Helmet>
+      <SEO title="Acing Coding Interviews | Pineapple Resume"
+        description="How to Answer Coding Interview Questions Properly - Use this cheat sheet to ace any Leetcode interview question."
+        url="htt[s://www.pineappleresume.com/interviewguide/coding" />
       <div>
         <h2 className="text-center p-2">Coding Interview Guide</h2>
         <div className="pb-2">Pre-interview prep</div>

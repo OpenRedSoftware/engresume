@@ -1,7 +1,7 @@
 import React from "react";
 import "../index.css";
 import { logevent } from "../../firebase/firebaseapp";
-import { Helmet } from "react-helmet-async";
+import SEO from "../../components/SEO";
 
 function Behavioral() {
   React.useEffect(() => {
@@ -10,17 +10,9 @@ function Behavioral() {
 
   return (
     <>
-      <Helmet prioritizeSeoTags>
-        <title>STAR Format Properly | Pineapple Resume</title>
-        <meta
-          property="og:title"
-          content="STAR Format Properly | Pineapple Resume"
-        />
-        <meta
-          property="og:description"
-          content="Advanced tips on How to use STAR Format - Use this cheat sheet to ace your next interview"
-        />
-      </Helmet>
+      <SEO title="STAR Format Properly | Pineapple Resume"
+        description="Advanced tips on How to use STAR Format - Use this cheat sheet to ace your next interview"
+        url="https://www.pineappleresume.com/interviewguide/behavioral" />
       <div>
         <h2 className="text-center p-2">Behavioral Interview Guide</h2>
         <ul>

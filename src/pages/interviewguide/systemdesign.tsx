@@ -1,7 +1,7 @@
 import React from "react";
 import "../index.css";
 import { logevent } from "../../firebase/firebaseapp";
-import { Helmet } from "react-helmet-async";
+import SEO from "../../components/SEO";
 
 function SystemDesign() {
   React.useEffect(() => {
@@ -10,17 +10,11 @@ function SystemDesign() {
 
   return (
     <>
-      <Helmet prioritizeSeoTags>
-        <title>System Design Interview Guide | Pineapple Resume</title>
-        <meta
-          property="og:title"
-          content="How to answer System Design questions in an Interview | Pineapple Resume"
-        />
-        <meta
-          property="og:description"
-          content="Use this System Design cheat sheet to ace any System Design interview question."
-        />
-      </Helmet>
+      <SEO
+        title="System Design Interview Guide | Pineapple Resume"
+        description="Use this System Design cheat sheet to ace any System Design interview question."
+        url="https://www.pineappleresume.com/interviewguide/systemdesign"
+      />
       <div>
         <h2 className="text-center p-2">System Design Interview Guide</h2>
         <ul>
@@ -123,11 +117,17 @@ function SystemDesign() {
                 <li>What database to use?</li>
                 <ul>
                   <li>Relational database like NoSQL</li>
-                  <li>User table (id, username) and a Tweet table (id, content, username(primary key of User table))</li>
+                  <li>
+                    User table (id, username) and a Tweet table (id, content,
+                    username(primary key of User table))
+                  </li>
                   <li>Relation between users and other users</li>
                   <li>Relation between users and tweets</li>
                 </ul>
-                <li>This is read-heavy, optimize with read replicas and aim for eventual consistency</li>
+                <li>
+                  This is read-heavy, optimize with read replicas and aim for
+                  eventual consistency
+                </li>
                 <li>Mention edge cases like when a celebrity tweets</li>
               </ul>
               <li>High-level design</li>

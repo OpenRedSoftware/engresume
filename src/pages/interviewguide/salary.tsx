@@ -1,7 +1,7 @@
 import React from "react";
 import "../index.css";
 import { logevent } from "../../firebase/firebaseapp";
-import { Helmet } from "react-helmet-async";
+import SEO from "../../components/SEO";
 import Form from "react-bootstrap/Form";
 
 function Salary() {
@@ -15,22 +15,11 @@ function Salary() {
 
   return (
     <>
-      <Helmet prioritizeSeoTags>
-        <title>How to do Salary Negotiation Properly | Pineapple Resume</title>
-        <meta
-          property="og:title"
-          content="How to do Salary Negotiation Properly | Pineapple Resume"
-        />
-        <meta
-          property="og:description"
-          content="No fluff - These are the steps you must follow to maximize your negotiation and make sure you get the highest compensation for any role."
-        />
-        <meta
-          property="og:url"
-          content="https://www.pineappleresume.com/salary"
-        />
-        <meta name="description" content="Salary Negotiation Guide" />
-      </Helmet>
+      <SEO
+        title="How to do Salary Negotiation Properly | Pineapple Resume"
+        description="No fluff - These are the steps to follow to get make sure you get the highest compensation for any role."
+        url="https://www.pineappleresume.com/interviewguide/salary"
+      />
       <div className="container">
         <h2 className="text-center p-2">Salary Negotiation Guide</h2>
         <div className="row pb-3 pb-md-0">

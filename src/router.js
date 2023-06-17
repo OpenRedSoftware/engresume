@@ -38,6 +38,7 @@ const Router = () => (
       <Route path="/interviewguide/coding" element={<WrapWithContent jsxElement={<Coding />} />} />
       <Route path="/interviewguide/systemdesign" element={<WrapWithContent jsxElement={<SystemDesign />} />} />
       <Route path="/interviewguide/salary" element={<WrapWithContent jsxElement={<Salary />} />} />
+      <Route path="*" element={<WrapWithContent jsxElement={<Splash />} />} />
     </Routes>
   </Switch>
 );

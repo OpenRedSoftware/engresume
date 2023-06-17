@@ -1,20 +1,21 @@
 import React from "react";
 import "../index.css";
-import { Helmet } from 'react-helmet-async';
+import SEO from "../../components/SEO";
 
 function Splash() {
   return (
     <main>
-      <Helmet prioritizeSeoTags>
-        <title>PineappleResume | Privacy</title>
-        <meta property="og:title" content="PineappleResume | Privacy" />
-      </Helmet>
+      <SEO
+        title="PineappleResume | Privacy"
+        description="Privacy Policy for 15094623 Canada Inc."
+        url="https://www.pineappleresume.com/privacy"
+      />
       <h1>Privacy Policy for 15094623 Canada Inc.</h1>
 
       <p>
-        At PineappleResume, accessible from https://PineappleResume.com/, one of our main
-        priorities is the privacy of our visitors. This Privacy Policy document
-        contains types of information that is collected and recorded by
+        At PineappleResume, accessible from https://PineappleResume.com/, one of
+        our main priorities is the privacy of our visitors. This Privacy Policy
+        document contains types of information that is collected and recorded by
         PineappleResume and how we use it.
       </p>
 
@@ -26,8 +27,9 @@ function Splash() {
       <p>
         This Privacy Policy applies only to our online activities and is valid
         for visitors to our website with regards to the information that they
-        shared and/or collect in PineappleResume. This policy is not applicable to any
-        information collected offline or via channels other than this website.
+        shared and/or collect in PineappleResume. This policy is not applicable
+        to any information collected offline or via channels other than this
+        website.
       </p>
 
       <h2>Consent</h2>
@@ -78,15 +80,16 @@ function Splash() {
       <h2>Log Files</h2>
 
       <p>
-        PineappleResume follows a standard procedure of using log files. These files
-        log visitors when they visit websites. All hosting companies do this and
-        a part of hosting services' analytics. The information collected by log
-        files include internet protocol (IP) addresses, browser type, Internet
-        Service Provider (ISP), date and time stamp, referring/exit pages, and
-        possibly the number of clicks. These are not linked to any information
-        that is personally identifiable. The purpose of the information is for
-        analyzing trends, administering the site, tracking users' movement on
-        the website, and gathering demographic information.
+        PineappleResume follows a standard procedure of using log files. These
+        files log visitors when they visit websites. All hosting companies do
+        this and a part of hosting services' analytics. The information
+        collected by log files include internet protocol (IP) addresses, browser
+        type, Internet Service Provider (ISP), date and time stamp,
+        referring/exit pages, and possibly the number of clicks. These are not
+        linked to any information that is personally identifiable. The purpose
+        of the information is for analyzing trends, administering the site,
+        tracking users' movement on the website, and gathering demographic
+        information.
       </p>
 
       <h2>Advertising Partners Privacy Policies</h2>
@@ -107,8 +110,8 @@ function Splash() {
       </p>
 
       <p>
-        Note that PineappleResume has no access to or control over these cookies that
-        are used by third-party advertisers.
+        Note that PineappleResume has no access to or control over these cookies
+        that are used by third-party advertisers.
       </p>
 
       <h2>Third Party Privacy Policies</h2>

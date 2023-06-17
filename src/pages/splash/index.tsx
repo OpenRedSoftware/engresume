@@ -4,7 +4,7 @@ import { logevent } from "../../firebase/firebaseapp";
 import Carousel from "../../components/Carousel";
 import MainJumbo from "../../components/MainJumbo";
 import "../index.css";
-import { Helmet } from 'react-helmet-async';
+import SEO from "../../components/SEO";
 
 function Splash() {
   React.useEffect(() => {
@@ -13,10 +13,11 @@ function Splash() {
 
   return (
     <>
-      <Helmet prioritizeSeoTags>
-        <title>PineappleResume | Resume Review by Top Recruiters</title>
-        <meta property="og:title" content="PineappleResume | Resume Review by Top Recruiters" />
-      </Helmet>
+      <SEO
+        title="PineappleResume | Resume Review by Top Recruiters"
+        description="PineappleResume.com - Professional Software Engineer resume reviews."
+        url="https://www.pineappleresume.com"
+      />
       <div>
         <Carousel />
         <MainJumbo />

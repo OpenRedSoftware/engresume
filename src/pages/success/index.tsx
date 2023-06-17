@@ -2,19 +2,20 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../index.css";
 import { logevent } from "../../firebase/firebaseapp";
-import { Helmet } from 'react-helmet-async';
+import SEO from "../../components/SEO";
 
 function Splash() {
   React.useEffect(() => {
-    logevent("view", {name: window.location.pathname});
+    logevent("view", { name: window.location.pathname });
   }, []);
 
   return (
     <main>
-      <Helmet prioritizeSeoTags>
-        <title>PineappleResume | Success</title>
-        <meta property="og:title" content="PineappleResume | Success" />
-      </Helmet>
+      <SEO
+        title="PineappleResume | Success"
+        description="PineappleResume.com - Purchase successful! Your resume feedback will be delivered soon."
+        url="https://www.pineappleresume.com/success"
+      />
       <div>
         <div
           className="jumbotron"
@@ -27,15 +28,14 @@ function Splash() {
               <Col md={{ span: 1 }}></Col>
               <Col md={{ span: 10 }}>
                 <strong>
-                  <h1
-                    className="d-flex justify-content-center"
-                  >
+                  <h1 className="d-flex justify-content-center">
                     Woohoo! Resume submitted!
                   </h1>
                 </strong>
 
                 <p className="d-flex justify-content-center m-2">
-                  Your resume will be reviewed within 48 hours. You will receive an email with detailed feedback when it's ready.
+                  Your resume will be reviewed within 48 hours. You will receive
+                  an email with detailed feedback when it's ready.
                 </p>
 
                 <div className="text-muted d-flex justify-content-center pb-2">

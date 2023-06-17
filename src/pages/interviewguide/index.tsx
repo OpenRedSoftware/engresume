@@ -1,8 +1,8 @@
 import React from "react";
 import "../index.css";
 import { logevent } from "../../firebase/firebaseapp";
-import { Helmet } from "react-helmet-async";
 import GuideCard from "../../components/GuideCard";
+import SEO from "../../components/SEO";
 
 function InterviewGuide() {
   React.useEffect(() => {
@@ -11,17 +11,11 @@ function InterviewGuide() {
 
   return (
     <div className="container">
-      <Helmet prioritizeSeoTags>
-        <title>Interview Guide | Pineapple Resume</title>
-        <meta
-          property="og:title"
-          content="Interview Guide | Pineapple Resume"
-        />
-        <meta
-          property="og:description"
-          content="How to Answer Behavioral, Coding, System Design, and Salary Negotiation Questions - Use this cheat sheet to ace any interview."
-        />
-      </Helmet>
+      <SEO
+        title="Interview Guide | Pineapple Resume"
+        description="How to Answer Behavioral, Coding, System Design, and Salary Negotiation Questions - Use this cheat sheet to ace any interview."
+        url="https://www.pineappleresume.com/interviewguide"
+      />
 
       <div className="row justify-content-center align-items-center">
         Choose a topic to deep dive:

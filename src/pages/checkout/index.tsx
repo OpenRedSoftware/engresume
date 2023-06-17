@@ -3,7 +3,7 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { logevent } from "../../firebase/firebaseapp";
-import { Helmet } from 'react-helmet-async';
+import SEO from "../../components/SEO";
 
 /**
  * @returns React form that takes in the Email, Resume, and an optional Notes section.
@@ -33,7 +33,7 @@ function Checkout() {
       setPaymentId(id);
     }
 
-    logevent("view", {name: window.location.pathname});
+    logevent("view", { name: window.location.pathname });
   }, []);
 
   function upload(e: any) {
@@ -93,10 +93,11 @@ function Checkout() {
 
   return (
     <>
-      <Helmet prioritizeSeoTags>
-        <title>PineappleResume | Checkout</title>
-        <meta property="og:title" content="PineappleResume | Checkout" />
-      </Helmet>
+      <SEO
+        title="PineappleResume | Checkout"
+        description="Checkout page for PineappleResume. $50 to get your resume reviewed by a professional engineer."
+        url="https://pineappleresume.com/checkout"
+      />
       <Form>
         <a
           className={!paid ? "btn btn-primary mb-5" : "btn btn-secondary mb-5"}
