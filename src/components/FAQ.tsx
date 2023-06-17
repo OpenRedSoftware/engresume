@@ -26,27 +26,11 @@ const FAQ = () => {
                 that.
               </li>
               <li className="pb-2">
-                Why is it so expensive?
+                Who is this service run by?
                 <ul>
                   <li>
-                    The price is a balance between having too many submissions
-                    and paying reviewers fairly. Also, consider:
-                    <ul>
-                      <li>
-                        Similar profit-driven services charge up to 350$ for a
-                        similar result (we can also vouch for the quality of
-                        these services)
-                      </li>
-                      <li>
-                        The 75th percentile Software Engineer salaries in the
-                        Bay Area is ~230k TC. If you're below that, you have a
-                        lot to gain.
-                      </li>
-                      <li>
-                        Time is money. Doubling your callback rate saves a lot
-                        of time.
-                      </li>
-                    </ul>
+                    This service is run by recruiters and hiring managers from
+                    startups to MANGA companies.
                   </li>
                 </ul>
               </li>
@@ -55,19 +39,25 @@ const FAQ = () => {
                 <ul>
                   <li>
                     See here:{" "}
-                    { /* Show this version if the layout is sm or larger */ }
-                    <a href="https://www.levels.fyi/community/thread/GXiJUI/free-resume-review" className="d-none d-sm-block">
+                    {/* Show this version if the layout is sm or larger */}
+                    <a
+                      href="https://www.levels.fyi/community/thread/GXiJUI/free-resume-review"
+                      className="d-none d-sm-block"
+                    >
                       https://levels.fyi/community/thread/GXiJUI/free-resume-review
                     </a>
-                    { /* Show this version if the layout is xs or smaller */ }
-                    <a href="https://www.levels.fyi/community/thread/GXiJUI/free-resume-review" className="d-block d-sm-none">
+                    {/* Show this version if the layout is xs or smaller */}
+                    <a
+                      href="https://www.levels.fyi/community/thread/GXiJUI/free-resume-review"
+                      className="d-block d-sm-none"
+                    >
                       Levels.fyi Thread
                     </a>
                   </li>
                 </ul>
               </li>
               <li className="pb-2">
-                Are you a recruiter for FAANG?
+                Do you do referrals?
                 <ul>
                   <li>No.</li>
                 </ul>
@@ -80,8 +70,8 @@ const FAQ = () => {
                 <ul>
                   <li>
                     Full refunds are available if you’re not satisfied with the
-                    service (note you will be barred from using the service
-                    again in the future)
+                    review. To request a refund, contact the email that sent you
+                    the review.
                   </li>
                 </ul>
               </li>
