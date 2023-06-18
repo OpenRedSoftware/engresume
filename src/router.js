@@ -11,6 +11,7 @@ import Behavioral from "./pages/interview/behavioral";
 import Coding from "./pages/interview/coding";
 import SystemDesign from "./pages/interview/systemdesign";
 import Salary from "./pages/interview/salary";
+import Examples from "./pages/examples";
 import "mdbreact/dist/css/mdb.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -38,6 +39,7 @@ const Router = () => (
       <Route path="/coding" element={<WrapWithContent jsxElement={<Coding />} />} />
       <Route path="/systemdesign" element={<WrapWithContent jsxElement={<SystemDesign />} />} />
       <Route path="/salary" element={<WrapWithContent jsxElement={<Salary />} />} />
+      <Route path="/examples" element={<WrapWithContent jsxElement={<Examples />} />} />
       <Route path="*" element={<WrapWithContent jsxElement={<Splash />} />} />
     </Routes>
   </Switch>

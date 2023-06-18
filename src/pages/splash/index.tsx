@@ -5,6 +5,8 @@ import Carousel from "../../components/Carousel";
 import MainJumbo from "../../components/MainJumbo";
 import "../index.css";
 import SEO from "../../components/SEO";
+import HomeCards from "../../components/HomeCards";
+import Refund from "../../components/Refund";
 
 function Splash() {
   React.useEffect(() => {
@@ -21,9 +23,13 @@ function Splash() {
       <div>
         <Carousel />
         <MainJumbo />
+        <HomeCards />
       </div>
 
       <FAQ />
+
+      <Refund />
+
     </>
   );
 }

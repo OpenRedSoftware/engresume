@@ -30,29 +30,7 @@ const FAQ = () => {
                 <ul>
                   <li>
                     This service is run by recruiters and hiring managers from
-                    startups to MANGA companies.
-                  </li>
-                </ul>
-              </li>
-              <li className="pb-2">
-                Any example reviews?
-                <ul>
-                  <li>
-                    See here:{" "}
-                    {/* Show this version if the layout is sm or larger */}
-                    <a
-                      href="https://www.levels.fyi/community/thread/GXiJUI/free-resume-review"
-                      className="d-none d-sm-block"
-                    >
-                      https://levels.fyi/community/thread/GXiJUI/free-resume-review
-                    </a>
-                    {/* Show this version if the layout is xs or smaller */}
-                    <a
-                      href="https://www.levels.fyi/community/thread/GXiJUI/free-resume-review"
-                      className="d-block d-sm-none"
-                    >
-                      Levels.fyi Thread
-                    </a>
+                    startups to MANGA+ companies.
                   </li>
                 </ul>
               </li>
@@ -60,19 +38,6 @@ const FAQ = () => {
                 Do you do referrals?
                 <ul>
                   <li>No.</li>
-                </ul>
-              </li>
-            </ul>
-            <h3>Refund Policy</h3>
-            <ul>
-              <li>
-                Refund Policy:
-                <ul>
-                  <li>
-                    Full refunds are available if you’re not satisfied with the
-                    review. To request a refund, contact the email that sent you
-                    the review.
-                  </li>
                 </ul>
               </li>
             </ul>

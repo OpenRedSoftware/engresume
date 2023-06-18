@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function GuideCard(props) {
   return (
-    <Card style={{ width: "18rem", maxWidth: "95%", margin: "0.5rem" }}>
+    <Card style={{ width: "18rem", maxWidth: "95%", margin: "1rem" }}>
       <Link to={props.linkdestination} style={{ textDecoration: "none" }}>
         <Card.Img
           variant="top"
