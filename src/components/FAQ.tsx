@@ -63,19 +63,6 @@ const FAQ = () => {
                 </ul>
               </li>
             </ul>
-            <h3>Refund Policy</h3>
-            <ul>
-              <li>
-                Refund Policy:
-                <ul>
-                  <li>
-                    Full refunds are available if you’re not satisfied with the
-                    review. To request a refund, contact the email that sent you
-                    the review.
-                  </li>
-                </ul>
-              </li>
-            </ul>
           </Col>
           <Col md={{ span: 1 }}></Col>
         </Row>
