@@ -10,6 +10,7 @@ function GuideCard(props) {
           variant="top"
           style={{ padding: "30%", height: "15rem" }}
           src={props.image}
+          alt={props.title + " icon"}
         />
         <Card.Body>
           <Card.Title style={{ textAlign: "center" }}>{props.title}</Card.Title>
