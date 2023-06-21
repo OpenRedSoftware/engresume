@@ -48,6 +48,7 @@ function Examples() {
         url="https://www.pineappleresume.com/examples"
       />
 
+      <h2 className="text-center p-2">Example Reviews</h2>
       <Row>
         <Col md={6} className="row justify-content-center mt-2 mb-3">
           Original
@@ -89,6 +90,30 @@ function Examples() {
       <Example
         left={
           <ul>
+            <li>[...] </li>
+            <li>
+              Modified data parsing scripts and modularized data collection in
+              Javascript
+            </li>
+            <li>[...] </li>
+          </ul>
+        }
+        right={
+          <ul>
+            <li>[...] </li>
+            <li>
+              Redesigned data pipeline using Firebase and S3, leading to a
+              24,000% speed increase and a 98% reduction in data issues
+            </li>
+            <li>[...] </li>
+          </ul>
+        }
+      />
+      <GetReviewed description="Our clients have gotten interviews at top companies like Google, Facebook, Amazon, Microsoft, and more." />
+
+      <Example
+        left={
+          <ul>
             <li>
               Languages: C, Scala, JavaScript, Python, C++, MySQL, React.js,
               Swift, Node.js, C++, Java,
@@ -109,31 +134,6 @@ function Examples() {
               <li>Tools: Git, Postgres, MongoDB, Xcode, Lambda, PowerApps</li>
             </ul>
           </>
-        }
-      />
-
-      <GetReviewed description="Our clients have gotten interviews at top companies like Google, Facebook, Amazon, Microsoft, and more." />
-
-      <Example
-        left={
-          <ul>
-            <li>[...] </li>
-            <li>
-              Modified data parsing scripts and modularized data collection in
-              Javascript
-            </li>
-            <li>[...] </li>
-          </ul>
-        }
-        right={
-          <ul>
-            <li>[...] </li>
-            <li>
-              Redesigned data pipeline using Firebase and S3, leading to a
-              24,000% speed increase and a 98% reduction in data issues
-            </li>
-            <li>[...] </li>
-          </ul>
         }
       />
 
