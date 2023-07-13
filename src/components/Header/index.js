@@ -4,7 +4,6 @@ import CheckoutButton from "./CheckoutButton";
 import InterviewGuideButton from "./InterviewGuideButton";
 import Theme from "./Theme";
 import { Link } from "react-router-dom";
-import "../../pages/index.css"
 
 const Header = (props) => {
   return (

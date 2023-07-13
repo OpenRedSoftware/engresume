@@ -12,8 +12,6 @@ import Coding from "./pages/interview/coding";
 import SystemDesign from "./pages/interview/systemdesign";
 import Salary from "./pages/interview/salary";
 import Examples from "./pages/examples";
-import "mdbreact/dist/css/mdb.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function ScrollToTop() {
   const { pathname } = useLocation();

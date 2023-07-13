@@ -1,4 +1,3 @@
-import "../../pages/index.css";
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 

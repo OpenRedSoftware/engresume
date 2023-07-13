@@ -1,5 +1,4 @@
 import React from "react";
-import "../index.css";
 import { logevent } from "../../firebase/firebaseapp";
 import GuideCard from "../../components/GuideCard";
 import SEO from "../../components/SEO";

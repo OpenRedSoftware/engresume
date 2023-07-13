@@ -2,7 +2,6 @@ import React from "react";
 import FAQ from "../../components/FAQ";
 import { logevent } from "../../firebase/firebaseapp";
 import Carousel from "../../components/Carousel";
-import "../index.css";
 import SEO from "../../components/SEO";
 import HomeCards from "../../components/HomeCards";
 import Refund from "../../components/Refund";

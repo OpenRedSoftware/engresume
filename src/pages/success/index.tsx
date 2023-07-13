@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "../index.css";
 import { logevent } from "../../firebase/firebaseapp";
 import SEO from "../../components/SEO";
 

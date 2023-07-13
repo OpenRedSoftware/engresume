@@ -17,6 +17,7 @@ function ThemeToggleButton() {
   return (
     <Button
       variant="outline"
+      size="sm"
       onClick={toggleTheme}
     >
       {theme === "dark" ? <MoonStarsFill /> : <SunFill />}

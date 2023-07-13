@@ -1,5 +1,4 @@
 import React from "react";
-import "../index.css";
 import SEO from "../../components/SEO";
 
 function Splash() {

@@ -33,3 +33,19 @@
 [data-bs-theme='dark'] {
   --color-text: var(--color-text-dark);
 }
+
+[data-bs-theme='dark'] .btn-primary {
+  background-color: #0964AA !important;
+  border-color: #0964AA !important;
+}
+
+[data-bs-theme='dark'] .btn-primary:hover,
+[data-bs-theme='dark'] .btn-primary:focus {
+  background-color: #075289 !important; 
+  border-color: #075289 !important;
+}
+
+[data-bs-theme='dark'] .form-check-input:checked {
+  background-color: #0964AA;
+  border-color: #0964AA;
+}

@@ -4,6 +4,9 @@ import { Provider } from "react-redux";
 import store from "./reducers/store";
 import Router from "./router";
 import { HelmetProvider } from 'react-helmet-async';
+import "mdbreact/dist/css/mdb.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css"
 
 const helmetContext = {};
 
