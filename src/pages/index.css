@@ -20,3 +20,16 @@
   border-radius: .3rem;
   margin-bottom: 2rem;
 }
+
+:root {
+  --color-text-light: black;
+  --color-text-dark: white;
+}
+
+[data-bs-theme='light'] {
+  --color-text: var(--color-text-light);
+}
+
+[data-bs-theme='dark'] {
+  --color-text: var(--color-text-dark);
+}

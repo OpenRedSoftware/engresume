@@ -4,6 +4,7 @@ import CheckoutButton from "./CheckoutButton";
 import InterviewGuideButton from "./InterviewGuideButton";
 import Theme from "./Theme";
 import { Link } from "react-router-dom";
+import "../../pages/index.css"
 
 const Header = (props) => {
   return (
@@ -11,7 +12,7 @@ const Header = (props) => {
       <Navbar expand="lg" className="mb-3 ps-3 pe-3 d-flex">
         <Navbar.Brand className="me-auto">
           <Link to="/"
-            style={{ textDecoration: "none", color: "black" }}
+            style={{ textDecoration: "none", color: "var(--color-text)" }}
           >
             Pineapple Resume
           </Link>
