@@ -47,8 +47,8 @@ function InterviewGuide() {
         />
       </div>
       <div className="text-muted">
-        Resources on this page were written by recruiters and hiring managers
-        from startups to MANGA companies.
+        Resources written by recruiters and hiring managers
+        from startups to MANGA+ companies.
       </div>
     </div>
   );

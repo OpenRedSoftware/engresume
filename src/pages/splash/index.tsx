@@ -22,7 +22,6 @@ function Splash() {
       />
       <div>
         <Carousel />
-        <MainJumbo />
         <HomeCards />
       </div>
 

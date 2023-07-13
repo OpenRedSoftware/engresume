@@ -253,7 +253,7 @@ function Examples() {
         }
       />
       <GetReviewed
-        description={`The higher you climb the ladder, the more power you have over work-life balance, work impact, salary, and more.`}
+        description={`Fact: The higher you go, the more power you have over work-life balance, impact, salary, and more.`}
       />
     </div>
   );
