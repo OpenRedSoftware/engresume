@@ -42,16 +42,25 @@
   grid-row: 2;
   justify-self: center;
 }
+[data-bs-theme='light'] {
+  --color-carousel-dot: white;
+  --color-carousel-dot-inverse: #696A6B;
+}
+
+[data-bs-theme='dark'] {
+  --color-carousel-dot: #696A6B;
+  --color-carousel-dot-inverse: #ADB5BD;
+}
 .carousel__dot {
-  background-color: white;
+  background-color: var(--color-carousel-dot);
   border-radius: 50%;
-  border: 0.0625rem solid #696a6b;
+  border: 0.0625rem solid var(--color-carousel-dot-inverse);
   display: block;
   height: 0.5rem;
   width: 0.5rem;
 }
 .carousel__dot.active {
-  background-color: #696a6b;
+  background-color: var(--color-carousel-dot-inverse);
 }
 .carousel__citation {
   display: block;
