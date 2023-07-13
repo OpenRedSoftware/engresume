@@ -14,13 +14,17 @@ function ThemeToggleButton() {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  const iconSize = "0.8rem";
+  const lrPaddingSize = "0.75rem";
+
   return (
     <Button
       variant="outline"
       size="sm"
       onClick={toggleTheme}
+      style={{paddingLeft: lrPaddingSize, paddingRight: lrPaddingSize}}
     >
-      {theme === "dark" ? <MoonStarsFill /> : <SunFill />}
+      {theme === "dark" ? <MoonStarsFill size={iconSize} /> : <SunFill size={iconSize} />}
     </Button>
   );
 }

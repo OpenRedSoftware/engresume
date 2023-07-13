@@ -19,7 +19,7 @@ const Header = (props) => {
         <div
           style={{
             display: "flex",
-            alignItems: "center",
+            alignItems: "stretch",
           }} >
           <InterviewGuideButton />
           <CheckoutButton />
