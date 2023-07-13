@@ -3,26 +3,6 @@ import React, { useEffect, useState } from "react";
 import "./styles.css";
 
 function ControlledCarousel() {
-  /*
-            <div className="captionContent">
-              "[...] This was super helpful. I've been having a tough time getting
-              interviews so I appreciate you taking the time to leave detailed
-              feedback."
-              <div className="text-muted pt-1">4 YOE Senior Mobile Dev</div>
-            </div>
-            <div className="captionContent">
-              "Thank you for your valuable insights. I truly appreciate the
-              dedicated time and effort you have invested in assisting me."
-              <div className="text-muted pt-1">0 YOE Intern Web Dev</div>
-            </div>
-            <div className="captionContent">
-              "For 50$, can you review it again? 😁"
-              <div className="text-muted pt-1">
-                2 YOE Backend Dev; Later landed Amazon SDE I
-              </div>
-            </div>
-            */
-
   const [activeSlide, setActiveSlide] = useState(1);
 
   const reviews = [
@@ -37,9 +17,9 @@ function ControlledCarousel() {
         "Thank you for your valuable insights. I truly appreciate the dedicated time and effort you have invested in assisting me.",
     },
     {
-      name: "2 YOE Backend Dev; Later landed Amazon SDE I",
-      quote: "For 50$, can you review it again? 😁",
-    },
+      name: "2 YOE Backend Dev; Landed Amazon SDE I",
+      quote: "Not only thorough but also practical [...]. I can't thank you enough",
+    }
   ];
 
   useEffect(() => {
