@@ -9,9 +9,11 @@ const helmetContext = {};
 
 createRoot(
   document.getElementById("root")).render(
-    <HelmetProvider context={helmetContext}>
-      <Provider store={store}>
-        <Router />
-      </Provider>
-    </HelmetProvider>
+    <div >
+      <HelmetProvider context={helmetContext}>
+        <Provider store={store}>
+          <Router />
+        </Provider>
+      </HelmetProvider>
+    </div>
   );
