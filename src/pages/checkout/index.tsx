@@ -1,10 +1,15 @@
 import { Provider } from "react-redux";
 import store from "./store";
 import SEO from "../../components/SEO";
-import React from "react";
+import React, { useEffect } from "react";
 import Checkout from "./Checkout";
+import { logevent } from "../../firebase/firebaseapp";
 
 function CheckoutWrapper() {
+  useEffect(() => {
+    logevent("view", { name: window.location.pathname });
+  });
+
   return (
     <Provider store={store}>
       <SEO

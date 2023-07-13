@@ -3,15 +3,21 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "./store";
-import { setShowMustpay, setEmail, setResume, setNotes } from "./formSlice";
+import { setEmail, setResume, setNotes } from "./formSlice";
 
 const FormComponent: React.FC = () => {
   const [triedSubmit, setTriedSubmit] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const { email, resume, notes, paid, paymentId, showMustpay } = useSelector(
+  const { email, resume, notes } = useSelector(
     (state: RootState) => state.form
   );
+
+  const stripeLink =
+    window.location.hostname === "localhost"
+      ? "https://buy.stripe.com/test_dR62bE7Py3ks75e7ss"
+      : "https://buy.stripe.com/28og1KgbZ3ZG7aE9AA";
+
   const dispatch = useDispatch();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -19,11 +25,6 @@ const FormComponent: React.FC = () => {
     setTriedSubmit(true);
 
     if (email === "" || resume === "") {
-      return;
-    }
-
-    if (!paid) {
-      dispatch(setShowMustpay(true));
       return;
     }
 
@@ -54,7 +55,6 @@ const FormComponent: React.FC = () => {
     formData.append("resume", resumeFile);
     formData.append("email", email);
     formData.append("notes", notes);
-    formData.append("paymentId", paymentId);
 
     setIsSubmitting(true);
 
@@ -63,8 +63,8 @@ const FormComponent: React.FC = () => {
       body: formData,
     })
       .then((res) => {
-        // Redirect the user to /success page
-        window.location.href = "/success";
+        // Redirect the user to Stripe Checkout
+        window.location.href = stripeLink;
       })
       .catch((err) => {
         alert(
@@ -132,14 +132,8 @@ const FormComponent: React.FC = () => {
       </Form.Group>
 
       <Button variant="primary" type="submit" disabled={isSubmitting}>
-        {!isSubmitting ? "Submit" : "Submitting..."}
+        Continue to Checkout
       </Button>
-
-      {showMustpay && (
-        <div className="alert alert-danger mt-3">
-          Please complete payment before submitting.
-        </div>
-      )}
     </Form>
   );
 };
