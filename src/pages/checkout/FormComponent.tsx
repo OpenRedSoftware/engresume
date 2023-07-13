@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ServiceSelect from "./ServiceSelect";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "./store";
-import { setEmail, setResume, setNotes, setService } from "./formSlice";
+import { setEmail, setResume, setNotes, setTriedSubmit } from "./formSlice";
 
 const FormComponent: React.FC = () => {
-  const [triedSubmit, setTriedSubmit] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const { email, resume, notes, service } = useSelector(
+  const { email, resume, notes, service, triedSubmit } = useSelector(
     (state: RootState) => state.form
   );
 
+  // todo - different stripe links for different services
   const stripeLink =
     window.location.hostname === "localhost"
       ? "https://buy.stripe.com/test_dR62bE7Py3ks75e7ss"
@@ -24,9 +23,9 @@ const FormComponent: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setTriedSubmit(true);
+    dispatch(setTriedSubmit(true));
 
-    if (email === "" || resume === "") {
+    if (email === "" || resume === "" || service === "") {
       return;
     }
 
@@ -57,6 +56,7 @@ const FormComponent: React.FC = () => {
     formData.append("resume", resumeFile);
     formData.append("email", email);
     formData.append("notes", notes);
+    formData.append("service", service);
 
     setIsSubmitting(true);
 

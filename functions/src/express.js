@@ -52,11 +52,12 @@ app.post("/upload", async (req, res) => {
     const email = fields.email;
     const notes = fields.notes;
     const paymentId = fields.paymentId;
+    const service = fields.service;
 
-    functions.logger.log(`Got a resume from ${email} with notes ${notes} and payment ID ${paymentId}.`);
+    functions.logger.log(`Got resume from ${email}mnotes ${notes}, payment ID ${paymentId}, and service ${service}`);
     functions.logger.log(`Resume size is ${resume?.length} bytes.`);
 
-    if (!resume || !email || !paymentId) {
+    if (!resume || !email || !paymentId || !service) {
       res.status(400).send();
       return;
     }
@@ -74,7 +75,11 @@ app.post("/upload", async (req, res) => {
       from: user,
       to: "danielginovker@gmail.com",
       subject: `New Resume from ${email}`,
-      text: `Email: ${email}\nNotes: ${notes}\nPayment ID: ${paymentId}\n\nDo not reply to this email directly`,
+      text: `Email: ${email}\n` +
+        `Notes: ${notes}\n` +
+        `Service: ${service}\n` +
+        `Payment ID: ${paymentId}\n\n` +
+        "Do not reply to this email directly",
       attachments: [
         {
           filename: "resume.pdf",

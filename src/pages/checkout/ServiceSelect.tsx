@@ -6,7 +6,7 @@ import { setService } from "./formSlice";
 import "./ServiceSelect.css";
 
 const ServiceSelect: React.FC = () => {
-  const { service } = useSelector(
+  const { service, triedSubmit } = useSelector(
     (state: RootState) => state.form
   );
 
@@ -16,7 +16,7 @@ const ServiceSelect: React.FC = () => {
     <>
       <Form.Label>Service</Form.Label>
       <Form.Group controlId="serviceSelection">
-        <div className="service-select-container">
+        <div className={`service-select-container ${!service && triedSubmit ? 'is-invalid' : ''}`}>
           <div
             className={`row-select ${service === "basic" ? 'selected-row' : ''}`}
             onClick={() => dispatch(setService("basic"))}
@@ -59,6 +59,11 @@ const ServiceSelect: React.FC = () => {
               />
           </div>
         </div>
+        { !service && triedSubmit &&
+          <Form.Control.Feedback type="invalid">
+            Please select a service.
+          </Form.Control.Feedback>
+        }
       </Form.Group>
     </>
   );

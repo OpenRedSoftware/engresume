@@ -34,3 +34,7 @@
 .row-select:not(:last-child) {
   border-bottom: 1px solid var(--custom-border-color);
 }
+
+.is-invalid {
+  border: 1px solid var(--custom-border-error-color);
+}

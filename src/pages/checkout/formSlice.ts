@@ -6,6 +6,7 @@ interface FormState {
   notes: string;
   service: string;
   paid: boolean;
+  triedSubmit: boolean;
 }
 
 const initialState: FormState = {
@@ -14,6 +15,7 @@ const initialState: FormState = {
   notes: '',
   service: '',
   paid: false,
+  triedSubmit: false,
 };
 
 export const formSlice = createSlice({
@@ -35,9 +37,12 @@ export const formSlice = createSlice({
     setPaid: (state, action: PayloadAction<boolean>) => {
       state.paid = action.payload;
     },
+    setTriedSubmit: (state, action: PayloadAction<boolean>) => {
+      state.triedSubmit = action.payload;
+    }
   },
 });
 
-export const { setEmail, setResume, setNotes, setService, setPaid } = formSlice.actions;
+export const { setEmail, setResume, setNotes, setService, setPaid, setTriedSubmit } = formSlice.actions;
 
 export default formSlice.reducer;
