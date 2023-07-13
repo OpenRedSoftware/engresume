@@ -9,9 +9,6 @@ function Example(props) {
   return (
     <div
       className="jumbotron"
-      style={{
-        backgroundColor: "#F8F9FA",
-      }}
     >
       <Row>
         <Col md={6}>{props.left}</Col>

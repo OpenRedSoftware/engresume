@@ -18,9 +18,6 @@ function Splash() {
       <div>
         <div
           className="jumbotron"
-          style={{
-            backgroundColor: "#F8F9FA",
-          }}
         >
           <Container>
             <Row>
