@@ -1,7 +1,5 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { Provider } from "react-redux";
-import store from "./reducers/store";
 import Router from "./router";
 import { HelmetProvider } from 'react-helmet-async';
 import "mdbreact/dist/css/mdb.css";
@@ -14,9 +12,7 @@ createRoot(
   document.getElementById("root")).render(
     <div >
       <HelmetProvider context={helmetContext}>
-        <Provider store={store}>
-          <Router />
-        </Provider>
+        <Router />
       </HelmetProvider>
     </div>
   );
