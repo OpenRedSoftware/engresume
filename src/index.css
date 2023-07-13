@@ -61,3 +61,7 @@
 [data-bs-theme="dark"] .svg-icon {
   fill: #ADB5BD;
 }
+
+[data-bs-theme="light"] .svg-icon {
+  fill: #101214;
+}
