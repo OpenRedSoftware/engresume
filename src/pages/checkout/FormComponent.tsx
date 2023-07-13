@@ -13,11 +13,20 @@ const FormComponent: React.FC = () => {
     (state: RootState) => state.form
   );
 
-  // todo - different stripe links for different services
-  const stripeLink =
-    window.location.hostname === "localhost"
-      ? "https://buy.stripe.com/test_dR62bE7Py3ks75e7ss"
-      : "https://buy.stripe.com/28og1KgbZ3ZG7aE9AA";
+  const getStripeLink = () => {
+    if (window.location.hostname === "localhost") {
+      return "https://buy.stripe.com/test_dR62bE7Py3ks75e7ss";
+    } else {
+      if (service === "basic") {
+        return "https://buy.stripe.com/8wM16Q1h53ZGbqUfZ1";
+      } else if (service === "full") {
+        return "https://buy.stripe.com/9AQ4j2gbZ8fW52wcMO";
+      } else if (service === "fullRewrite") {
+        return "https://buy.stripe.com/3csdTCe3R1Ry52wfYZ";
+      }
+    }
+  }
+
 
   const dispatch = useDispatch();
 
@@ -65,7 +74,7 @@ const FormComponent: React.FC = () => {
       body: formData,
     })
       .then((res) => {
-        window.location.href = stripeLink;
+        window.location.href = getStripeLink();
       })
       .catch((err) => {
         alert(
