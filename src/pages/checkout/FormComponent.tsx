@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
+import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import ServiceSelect from "./ServiceSelect";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "./store";
-import { setEmail, setResume, setNotes } from "./formSlice";
+import { setEmail, setResume, setNotes, setService } from "./formSlice";
 
 const FormComponent: React.FC = () => {
   const [triedSubmit, setTriedSubmit] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const { email, resume, notes } = useSelector(
+  const { email, resume, notes, service } = useSelector(
     (state: RootState) => state.form
   );
 
@@ -63,7 +65,6 @@ const FormComponent: React.FC = () => {
       body: formData,
     })
       .then((res) => {
-        // Redirect the user to Stripe Checkout
         window.location.href = stripeLink;
       })
       .catch((err) => {
@@ -76,7 +77,7 @@ const FormComponent: React.FC = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Form.Group controlId="formBasicEmail">
+      <Form.Group controlId="formBasicEmail" className="mb-3">
         <Form.Label>Email address</Form.Label>
         <Form.Control
           value={email}
@@ -90,12 +91,10 @@ const FormComponent: React.FC = () => {
         />
         <Form.Text className="text-muted">
           We'll never share your email with anyone else.
-          <br />
-          <br />
         </Form.Text>
       </Form.Group>
 
-      <Form.Group controlId="formBasicResume">
+      <Form.Group controlId="formBasicResume" className="mb-3">
         <Form.Label>Resume</Form.Label>
         <Form.Control
           value={resume}
@@ -108,12 +107,10 @@ const FormComponent: React.FC = () => {
         />
         <Form.Text className="text-muted">
           Please upload your resume as a PDF.
-          <br />
-          <br />
         </Form.Text>
       </Form.Group>
 
-      <Form.Group controlId="formBasicNotes">
+      <Form.Group controlId="formBasicNotes" className="mb-3">
         <Form.Label>Notes</Form.Label>
         <Form.Control
           value={notes}
@@ -126,10 +123,12 @@ const FormComponent: React.FC = () => {
         />
         <Form.Text className="text-muted">
           Please enter any notes you would like to add.
-          <br />
-          <br />
         </Form.Text>
       </Form.Group>
+
+      <div className="mb-3">
+        <ServiceSelect />
+      </div>
 
       <Button variant="primary" type="submit" disabled={isSubmitting}>
         Continue to Checkout
