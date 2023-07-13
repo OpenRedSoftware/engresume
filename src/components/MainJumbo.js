@@ -7,9 +7,6 @@ function MainJumbo() {
   return (
     <div
       className="jumbotron"
-      style={{
-        backgroundColor: "#F8F9FA",
-      }}
     >
       <strong>
         <h1

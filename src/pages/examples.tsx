@@ -1,17 +1,14 @@
 import React from "react";
 import { logevent } from "../firebase/firebaseapp";
-import "./index.css";
 import SEO from "../components/SEO";
 import { Col, Row } from "react-bootstrap";
 import GuideCard from "../components/GuideCard";
+import FilePenIcon from "../icons/FilePenIcon";
 
 function Example(props) {
   return (
     <div
       className="jumbotron"
-      style={{
-        backgroundColor: "#F8F9FA",
-      }}
     >
       <Row>
         <Col md={6}>{props.left}</Col>
@@ -27,7 +24,7 @@ function GetReviewed(props) {
     <div className="row justify-content-center align-items-center d-flex stretch mt-2 mb-3">
       <GuideCard
         linkdestination="/checkout"
-        image="/res/icons/file-pen-solid.svg"
+        image={FilePenIcon}
         title="Get Reviewed"
         description={props.description}
       />

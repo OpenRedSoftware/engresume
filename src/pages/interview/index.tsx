@@ -1,8 +1,11 @@
 import React from "react";
-import "../index.css";
 import { logevent } from "../../firebase/firebaseapp";
 import GuideCard from "../../components/GuideCard";
 import SEO from "../../components/SEO";
+import BehaviouralIcon from "../../icons/BehaviouralIcon";
+import CodeIcon from "../../icons/CodeIcon";
+import SysDesignIcon from "../../icons/SysDesignIcon";
+import SalaryIcon from "../../icons/SalaryIcon";
 
 function InterviewGuide() {
   React.useEffect(() => {
@@ -23,25 +26,25 @@ function InterviewGuide() {
       <div className="row justify-content-center align-items-center d-flex align-items-stretch mt-2 mb-3">
         <GuideCard
           linkdestination="/behavioral"
-          image="/res/icons/behavioral.svg"
+          image={BehaviouralIcon}
           title="Behavioral Questions"
           description="More than STAR format - How to actually answer behavioral questions."
         />
         <GuideCard
           linkdestination="/coding"
-          image="/res/icons/code.svg"
+          image={CodeIcon}
           title="Coding Questions"
           description="How to prepare for coding questions - Besides Leetcode."
         />
         <GuideCard
           linkdestination="/systemdesign"
-          image="/res/icons/sd.svg"
+          image={SysDesignIcon}
           title="System Design"
           description="Steps to follow during your SD interview - Including the Dos and Don'ts of System Design."
         />
         <GuideCard
           linkdestination="/salary"
-          image="/res/icons/salary.svg"
+          image={SalaryIcon}
           title="Salary Negotiation"
           description="Concrete tips to follow when negotiating for the highest salary."
         />

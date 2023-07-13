@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "../index.css";
 import { logevent } from "../../firebase/firebaseapp";
 import SEO from "../../components/SEO";
 
@@ -19,9 +18,6 @@ function Splash() {
       <div>
         <div
           className="jumbotron"
-          style={{
-            backgroundColor: "#F8F9FA",
-          }}
         >
           <Container>
             <Row>
