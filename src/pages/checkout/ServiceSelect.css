@@ -8,11 +8,19 @@
   padding: 0.5em;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.9375rem;
   box-sizing: border-box;
+}
+
+.expanded-row {
+  flex-direction: column;
+}
+
+.service-info {
+  padding-top: 0.5em;
+  color: gray;
 }
 
 [data-bs-theme='light'] .row-select:hover:not(.selected-row) {
@@ -35,6 +43,8 @@
   border-bottom: 1px solid var(--custom-border-color);
 }
 
-.is-invalid {
-  border: 1px solid var(--custom-border-error-color);
+.title-radio-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }

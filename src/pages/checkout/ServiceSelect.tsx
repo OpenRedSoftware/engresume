@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "./store";
@@ -6,21 +6,29 @@ import { setService } from "./formSlice";
 import "./ServiceSelect.css";
 
 const ServiceSelect: React.FC = () => {
-  const { service, triedSubmit } = useSelector(
-    (state: RootState) => state.form
-  );
-
+  const { service } = useSelector((state: RootState) => state.form);
   const dispatch = useDispatch();
+
+  // Additional state to handle which row is expanded
+  const [expandedService, setExpandedService] = useState("");
+
+  const handleRowClick = (serviceName: string) => {
+    if (service !== serviceName) {
+      dispatch(setService(serviceName));
+      setExpandedService(serviceName); // Expand the clicked row
+    }
+  };
 
   return (
     <>
       <Form.Label>Service</Form.Label>
       <Form.Group controlId="serviceSelection">
-        <div className={`service-select-container ${!service && triedSubmit ? 'is-invalid' : ''}`}>
+        <div className="service-select-container">
           <div
-            className={`row-select ${service === "basic" ? 'selected-row' : ''}`}
-            onClick={() => dispatch(setService("basic"))}
+            className={`row-select ${service === "basic" ? 'selected-row' : ''} ${expandedService === "basic" ? 'expanded-row' : ''}`}
+            onClick={() => handleRowClick("basic")}
           >
+            <div className="title-radio-wrapper">
               <div>Basic Review - $19.99</div>
               <Form.Check
                 type="radio"
@@ -29,12 +37,15 @@ const ServiceSelect: React.FC = () => {
                 checked={service === "basic"}
                 onChange={() => {}}
               />
+            </div>
+            {expandedService === "basic" && <div className="service-info">This is the basic description</div>}
           </div>
 
           <div
-            className={`row-select ${service === "full" ? 'selected-row' : ''}`}
-            onClick={() => dispatch(setService("full"))}
+            className={`row-select ${service === "full" ? 'selected-row' : ''} ${expandedService === "full" ? 'expanded-row' : ''}`}
+            onClick={() => handleRowClick("full")}
           >
+            <div className="title-radio-wrapper">
               <div>Full Review - $49.99</div>
               <Form.Check
                 type="radio"
@@ -43,12 +54,15 @@ const ServiceSelect: React.FC = () => {
                 checked={service === "full"}
                 onChange={() => {}}
               />
+            </div>
+            {expandedService === "full" && <div className="service-info">This is the full description</div>}
           </div>
           
           <div
-            className={`row-select ${service === "fullRewrite" ? 'selected-row' : ''}`}
-            onClick={() => dispatch(setService("fullRewrite"))}
+            className={`row-select ${service === "fullRewrite" ? 'selected-row' : ''} ${expandedService === "fullRewrite" ? 'expanded-row' : ''}`}
+            onClick={() => handleRowClick("fullRewrite")}
           >
+            <div className="title-radio-wrapper">
               <div>Full Review + Resume Rewrite - $349.99</div>
               <Form.Check
                 type="radio"
@@ -57,13 +71,10 @@ const ServiceSelect: React.FC = () => {
                 checked={service === "fullRewrite"}
                 onChange={() => {}}
               />
+            </div>
+            {expandedService === "fullRewrite" && <div className="service-info">This is the full rewrite description</div>}
           </div>
         </div>
-        { !service && triedSubmit &&
-          <Form.Control.Feedback type="invalid">
-            Please select a service.
-          </Form.Control.Feedback>
-        }
       </Form.Group>
     </>
   );
