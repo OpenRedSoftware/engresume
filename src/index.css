@@ -36,10 +36,12 @@
 
 [data-bs-theme='light'] {
   --color-text: var(--color-text-light);
+  --custom-border-color: #DEE2E6; 
 }
 
 [data-bs-theme='dark'] {
   --color-text: var(--color-text-dark);
+  --custom-border-color: #495057;
 }
 
 [data-bs-theme='dark'] .btn-primary {

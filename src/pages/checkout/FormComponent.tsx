@@ -130,6 +130,9 @@ const FormComponent: React.FC = () => {
         <ServiceSelect />
       </div>
 
+      <div className="mb-3">
+      </div>
+
       <Button variant="primary" type="submit" disabled={isSubmitting}>
         Continue to Checkout
       </Button>
