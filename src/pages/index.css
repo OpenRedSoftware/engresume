@@ -23,7 +23,7 @@
 
 :root {
   --color-text-light: black;
-  --color-text-dark: white;
+  --color-text-dark: #ADB5BD;
 }
 
 [data-bs-theme='light'] {
