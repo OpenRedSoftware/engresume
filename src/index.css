@@ -49,3 +49,7 @@
   background-color: #0964AA;
   border-color: #0964AA;
 }
+
+[data-bs-theme="dark"] .svg-icon {
+  fill: #ADB5BD;
+}

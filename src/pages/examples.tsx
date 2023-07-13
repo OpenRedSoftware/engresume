@@ -3,6 +3,7 @@ import { logevent } from "../firebase/firebaseapp";
 import SEO from "../components/SEO";
 import { Col, Row } from "react-bootstrap";
 import GuideCard from "../components/GuideCard";
+import FilePenIcon from "../icons/FilePenIcon";
 
 function Example(props) {
   return (
@@ -26,7 +27,7 @@ function GetReviewed(props) {
     <div className="row justify-content-center align-items-center d-flex stretch mt-2 mb-3">
       <GuideCard
         linkdestination="/checkout"
-        image="/res/icons/file-pen-solid.svg"
+        image={FilePenIcon}
         title="Get Reviewed"
         description={props.description}
       />
