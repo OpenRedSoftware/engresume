@@ -54,7 +54,7 @@ app.post("/upload", async (req, res) => {
     const paymentId = fields.paymentId;
     const service = fields.service;
 
-    functions.logger.log(`Got resume from ${email}mnotes ${notes}, payment ID ${paymentId}, and service ${service}`);
+    functions.logger.log(`Got resume from ${email}, notes ${notes}, payment ID ${paymentId}, and service ${service}`);
     functions.logger.log(`Resume size is ${resume?.length} bytes.`);
 
     if (!resume || !email || !service) {
