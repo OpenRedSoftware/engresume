@@ -57,7 +57,7 @@ app.post("/upload", async (req, res) => {
     functions.logger.log(`Got resume from ${email}mnotes ${notes}, payment ID ${paymentId}, and service ${service}`);
     functions.logger.log(`Resume size is ${resume?.length} bytes.`);
 
-    if (!resume || !email || !paymentId || !service) {
+    if (!resume || !email || !service) {
       res.status(400).send();
       return;
     }
@@ -77,9 +77,8 @@ app.post("/upload", async (req, res) => {
       subject: `New Resume from ${email}`,
       text: `Email: ${email}\n` +
         `Notes: ${notes}\n` +
-        `Service: ${service}\n` +
-        `Payment ID: ${paymentId}\n\n` +
-        "Do not reply to this email directly",
+        `Service: ${service}\n\n` +
+        "Do not reply to this email directly. Check Stripe for an accurate payment around this time.",
       attachments: [
         {
           filename: "resume.pdf",
