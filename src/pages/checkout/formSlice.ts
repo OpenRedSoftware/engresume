@@ -4,14 +4,18 @@ interface FormState {
   email: string;
   resume: string;
   notes: string;
+  service: string;
   paid: boolean;
+  triedSubmit: boolean;
 }
 
 const initialState: FormState = {
   email: '',
   resume: '',
   notes: '',
+  service: '',
   paid: false,
+  triedSubmit: false,
 };
 
 export const formSlice = createSlice({
@@ -27,12 +31,18 @@ export const formSlice = createSlice({
     setNotes: (state, action: PayloadAction<string>) => {
       state.notes = action.payload;
     },
+    setService: (state, action: PayloadAction<string>) => {
+      state.service = action.payload;
+    },
     setPaid: (state, action: PayloadAction<boolean>) => {
       state.paid = action.payload;
     },
+    setTriedSubmit: (state, action: PayloadAction<boolean>) => {
+      state.triedSubmit = action.payload;
+    }
   },
 });
 
-export const { setEmail, setResume, setNotes, setPaid } = formSlice.actions;
+export const { setEmail, setResume, setNotes, setService, setPaid, setTriedSubmit } = formSlice.actions;
 
 export default formSlice.reducer;

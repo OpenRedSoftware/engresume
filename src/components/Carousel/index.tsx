@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./styles.css";
 
 function ControlledCarousel() {
-  const [activeSlide, setActiveSlide] = useState(1);
+  const [activeSlide, setActiveSlide] = useState(0);
 
   const reviews = [
     {
@@ -18,36 +18,33 @@ function ControlledCarousel() {
     {
       name: "2 YOE Backend Dev; Landed Amazon SDE I",
       quote: "Not only thorough but also practical [...]. I can't thank you enough",
+    },
+    {
+      name: "15 YOE Senior Firmware Engineer",
+      quote: "Wish I found this sooner."
     }
   ];
 
   useEffect(() => {
-    // This variable prevents race condition
     const cycleReviews = () => {
-      setActiveSlide(activeSlide === 3 ? 1 : activeSlide + 1);
+      setActiveSlide(activeSlide === reviews.length - 1 ? 0 : activeSlide + 1);
     };
-    // intervalId identified so it can be canceled on unmount
-    const intervalId = setInterval(() => {
-      cycleReviews();
-    }, 6000);
-    // Removes interval on unmount
+    const intervalId = setInterval(cycleReviews, 6000);
     return () => clearInterval(intervalId);
-  }, [activeSlide]);
+  }, [activeSlide, reviews.length]);
 
   return (
     <div className="App">
       <ul className="carousel__list">
         {reviews.map((review, index) => {
           const { name, quote } = review;
-          const count = index + 1;
           return (
             <li
               className={`carousel__item
-                ${count === activeSlide ? " active" : ""}
-                ${count < activeSlide ? " left" : ""}
-                ${count > activeSlide ? " right" : ""}
-              `}
-              key={count}
+                ${index === activeSlide ? " active" : ""}
+                ${index < activeSlide ? " left" : ""}
+                ${index > activeSlide ? " right" : ""}`}
+              key={index}
             >
               <blockquote className="carousel__quote">
                 <cite>
@@ -59,21 +56,17 @@ function ControlledCarousel() {
           );
         })}
         <li className="carousel__indicator">
-          <span
-            className={`carousel__dot${activeSlide === 1 ? " active" : ""}`}
-            onClick={() => setActiveSlide(1)}
-            role="button"
-          />
-          <span
-            className={`carousel__dot${activeSlide === 2 ? " active" : ""}`}
-            onClick={() => setActiveSlide(2)}
-            role="button"
-          />
-          <span
-            className={`carousel__dot${activeSlide === 3 ? " active" : ""}`}
-            onClick={() => setActiveSlide(3)}
-            role="button"
-          />
+          {reviews.map((_, index) => (
+            <span
+              key={index}
+              className={`carousel__dot${activeSlide === index ? " active" : ""}`}
+              onClick={() => setActiveSlide(index)}
+              role="button"
+              tabIndex={0}
+              aria-label={`Slide ${index + 1}`}
+              aria-pressed={activeSlide === index ? "true" : "false"}
+            />
+          ))}
         </li>
       </ul>
     </div>
