@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import ServiceSelect from "./ServiceSelect";
@@ -83,6 +83,11 @@ const FormComponent: React.FC = () => {
         setIsSubmitting(false);
       });
   };
+
+  useEffect(() => {
+    setIsSubmitting(false);
+  }, []);
+
 
   return (
     <Form onSubmit={handleSubmit}>
