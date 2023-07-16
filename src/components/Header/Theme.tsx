@@ -23,6 +23,7 @@ function ThemeToggleButton() {
       size="sm"
       onClick={toggleTheme}
       style={{paddingLeft: lrPaddingSize, paddingRight: lrPaddingSize}}
+      aria-label="Toggle theme"
     >
       {theme === "dark" ? <MoonStarsFill size={iconSize} /> : <SunFill size={iconSize} />}
     </Button>
