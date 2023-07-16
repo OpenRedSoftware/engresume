@@ -21,7 +21,7 @@ function ControlledCarousel() {
     },
     {
       name: "15 YOE Senior Firmware Engineer",
-      quote: "Wish I found this sooner."
+      quote: "Wow. [...] Wish I found this sooner"
     }
   ];
 

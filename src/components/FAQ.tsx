@@ -13,8 +13,8 @@ const FAQ = () => {
               <li className="pb-2">
                 <div className="pb-2">What does this service offer?</div>
                 <div className="pb-2">
-                  Actionable feedback and improvements that can be inserted into
-                  your resume for better results. This includes:
+                  Actionable feedback and improvements that can be directly
+                  used for better results. This includes:
                 </div>
                 <ul className="pb-2">
                   <li>Bulletpoint improvements & suggestions</li>
@@ -22,8 +22,7 @@ const FAQ = () => {
                   <li>Impact & anti-dilution modifications</li>
                 </ul>
                 If you're not targetting Software Engineering, include your role
-                (and optionally JD) during submission so we can tailor towards
-                that.
+                (and optionally JD) and we will tailor towards that.
               </li>
               <li className="pb-2">
                 Who is this service run by?
@@ -37,7 +36,11 @@ const FAQ = () => {
               <li className="pb-2">
                 Do you do referrals?
                 <ul>
-                  <li>No.</li>
+                  <li>
+                    We have referrals for some large companies. If there's a
+                    specific company you're applying for, include it in your
+                    submission, and we'll let you know if there's a match.
+                  </li>
                 </ul>
               </li>
             </ul>
