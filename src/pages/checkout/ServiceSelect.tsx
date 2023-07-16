@@ -22,15 +22,17 @@ const ServiceSelect: React.FC = () => {
     ),
     "full": (
       <ul>
-        <li>All services included in Basic Review</li>
-        <li>Rewritten bullet points where needed</li>
+        <li>Feedback on all content, including skills, education, work experience, and projects</li>
+        <li>Feedback on formatting</li>
+        <li>Rewritten bullet points & bulletpoint feedback</li>
       </ul>
     ),
     "fullRewrite": (
       <ul>
-        <li>All services included in Full Review</li>
-        <li>All bullet points rewritten</li>
         <li>New resume from a professional template</li>
+        <li>Built from any submitted content, including Linkedin, Github and projects</li>
+        <li>Back and forth discussion until you're satisfied</li>
+        <li>Instructions on how to maintain the resume quality going forwards</li>
       </ul>
     )
   }

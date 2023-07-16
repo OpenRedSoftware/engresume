@@ -13,7 +13,7 @@ const initialState: FormState = {
   email: '',
   resume: '',
   notes: '',
-  service: '',
+  service: 'basic',
   paid: false,
   triedSubmit: false,
 };
