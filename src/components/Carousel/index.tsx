@@ -6,21 +6,21 @@ function ControlledCarousel() {
 
   const reviews = [
     {
-      name: "4 YOE Senior Mobile Dev",
+      name: "4 YOE",
       quote:
         "[...] This was super helpful. I've been having a tough time getting interviews so I appreciate you taking the time to leave detailed feedback.",
     },
     {
-      name: "0 YOE Intern Web Dev",
+      name: "0 YOE",
       quote:
         "Thank you for your valuable insights. I truly appreciate the dedicated time and effort you have invested in assisting me.",
     },
     {
-      name: "2 YOE Backend Dev; Landed Amazon SDE I",
+      name: "2 YOE",
       quote: "Not only thorough but also practical [...]. I can't thank you enough",
     },
     {
-      name: "15 YOE Senior Firmware Engineer",
+      name: "15 YOE",
       quote: "Wow. [...] Wish I found this sooner"
     }
   ];
