@@ -102,6 +102,7 @@ function Salary() {
               If your exact role/company isn’t available on Levels, find similar
               ones.
             </li>
+            <li>Ask, as early as possible, "What's the salary band for this role?"</li>
           </ul>
           <li>Do not lie about your current comp.</li>
           <ul style={{ display: cheatsheet ? "none" : "block" }}>
